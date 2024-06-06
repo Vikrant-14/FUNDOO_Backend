@@ -3,6 +3,7 @@ using RepositoryLayer.Context;
 using RepositoryLayer.CustomExecption;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
+using RepositoryLayer.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,6 +52,9 @@ namespace RepositoryLayer.Service
 
             if (findUser == null)
             {
+                var hashedPassword = PasswordHasher.HashPassword(model.Password);
+                model.Password = hashedPassword;
+
                 userEntity = new UserEntity()
                 {
                     Name = model.Name,
@@ -74,12 +78,22 @@ namespace RepositoryLayer.Service
 
         public UserEntity LoginUser(LoginML model)
         {
-            var result = _context.Users.Where(u => u.Email == model.Email && u.Password == model.Password).FirstOrDefault();
+            var result = _context.Users.Where(u => u.Email == model.Email).FirstOrDefault();
 
             if (result == null)
             {
                 throw new UserException("Invalid Email/Password");
             }
+
+            if(PasswordHasher.VerifyPassword(result.Password, model.Password))
+            {
+                return result;
+            }
+            else
+            {
+                throw new UserException("Invalid Email/Password");
+            }
+
 
             return result;
         }

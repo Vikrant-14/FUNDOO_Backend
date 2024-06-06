@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer;
 using RepositoryLayer.CustomExecption;
+using RepositoryLayer.Utility;
 
 namespace Fundoo.Controllers
 {

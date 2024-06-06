@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "wqYQB+bpowvaObHbuVNt74ZJv+1/xz+p8fC0wH4k2N8848eKMFvhWS1f4Bda08dK9R7YKVVJNKQve0RHb6f2vQ==",
+  "dgSpecHash": "H1uijc7RTPW3ZRbQ15CdjUStGCYIPkzmu1cNJvVKUujTIFkD079/V6Lq/tGBNSWdGiejM6PVUUZVqSnShPKaZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\kirti\\Vikrant\\CDAC\\FUNDOO\\Fundoo\\Fundoo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kirti\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

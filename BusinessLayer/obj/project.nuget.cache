@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "bjO5X0q4E6E0Th/0hZbDTCFWPI/wCeviL6UAhkt5Ttlsu2n+3+UmoU3Vk2zobQ2ifCArpx9G6HJqWtPTr6AS/w==",
+  "dgSpecHash": "pefeFFgI1TN8ctpuYsszvgvpYAdOwLgfC6MVX3HUcZJas6Rztx0NZ7QZ1e71rM3zEI2KUtKdIRAZkWVhabv3Mg==",
   "success": true,
   "projectFilePath": "C:\\Users\\kirti\\Vikrant\\CDAC\\FUNDOO\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

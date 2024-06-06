@@ -28,9 +28,6 @@ namespace RepositoryLayer.Entity
         
         public long PhoneNumber { get; set; }
 
-        internal int Count()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
