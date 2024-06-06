@@ -12,5 +12,6 @@ namespace RepositoryLayer.Interface
     {
         public UserEntity AddUsers(UserML model);
         public UserEntity RegisterNewUser(UserML model);
+        public UserEntity LoginUser(LoginML model);
     }
 }

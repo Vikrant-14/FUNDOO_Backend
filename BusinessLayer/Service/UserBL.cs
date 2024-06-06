@@ -45,5 +45,18 @@ namespace BusinessLayer.Service
                 throw;
             }
         }
+
+
+        public UserEntity LoginUser(LoginML model)
+        {
+            try
+            {
+                return userRL.LoginUser(model);
+            }
+            catch (UserException)
+            {
+                throw;
+            }
+        }
     }
 }

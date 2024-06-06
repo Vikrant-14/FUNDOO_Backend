@@ -27,5 +27,10 @@ namespace RepositoryLayer.Entity
         [Required(ErrorMessage ="Phone Number required")]
         
         public long PhoneNumber { get; set; }
+
+        internal int Count()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

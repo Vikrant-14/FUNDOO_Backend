@@ -71,6 +71,19 @@ namespace RepositoryLayer.Service
             return userEntity;
         }
 
-       
+
+        public UserEntity LoginUser(LoginML model)
+        {
+            var result = _context.Users.Where(u => u.Email == model.Email && u.Password == model.Password).FirstOrDefault();
+
+            if (result == null)
+            {
+                throw new UserException("Invalid Email/Password");
+            }
+
+            return result;
+        }
+
+
     }
 }

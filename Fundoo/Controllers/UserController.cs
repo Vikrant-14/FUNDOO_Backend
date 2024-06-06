@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Interface;
+using BusinessLayer.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer;
@@ -61,7 +62,7 @@ namespace Fundoo.Controllers
             {
                 var result = userBL.RegisterNewUser(model);
 
-                if( result != null)
+                if (result != null)
                 {
                     responseML.Success = true;
                     responseML.Message = "User Registered Successfully";
@@ -77,6 +78,31 @@ namespace Fundoo.Controllers
             }
 
             return StatusCode(201, responseML);
+        }
+
+
+        [HttpPost("login")]
+        public IActionResult LoginUser(LoginML model)
+        {
+            try
+            {
+                var result = userBL.LoginUser(model);
+
+                if (result != null)
+                {
+                    responseML.Success = true;
+                    responseML.Message = "User Login Successfully";
+                    responseML.Data = result;
+                }
+            }
+            catch (UserException ex)
+            {
+                responseML.Success = false;
+                responseML.Message = ex.Message;
+                return StatusCode(400, responseML);
+            }
+
+            return StatusCode(200, responseML);
         }
     }
 }
