@@ -1,1 +1,2 @@
-FUNDOO/Fundoo/Properties/launchSettings
+Fundoo/Properties/*.json
+Fundoo/.vs/
