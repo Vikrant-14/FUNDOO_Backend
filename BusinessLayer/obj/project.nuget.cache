@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pefeFFgI1TN8ctpuYsszvgvpYAdOwLgfC6MVX3HUcZJas6Rztx0NZ7QZ1e71rM3zEI2KUtKdIRAZkWVhabv3Mg==",
+  "dgSpecHash": "pbtikwjOabzn83UDkgggYjYV//wGu9dlQi2YlY/Ql7QhrBwejcg7qd6gSHngXYdOqMkJi+dJEmSsE+UgF28cbw==",
   "success": true,
   "projectFilePath": "C:\\Users\\kirti\\Vikrant\\CDAC\\FUNDOO\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kirti\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

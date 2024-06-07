@@ -52,8 +52,10 @@ namespace RepositoryLayer.Service
 
             if (findUser == null)
             {
-                var hashedPassword = PasswordHasher.HashPassword(model.Password);
-                model.Password = hashedPassword;
+                //var hashedPassword = PasswordHasher.HashPassword(model.Password);
+                //model.Password = hashedPassword;
+
+                model.Password = PasswordService.HashPassword(model.Password);
 
                 userEntity = new UserEntity()
                 {
@@ -85,7 +87,12 @@ namespace RepositoryLayer.Service
                 throw new UserException("Invalid Email/Password");
             }
 
-            if(PasswordHasher.VerifyPassword(result.Password, model.Password))
+            //if(PasswordHasher.VerifyPassword(result.Password, model.Password))
+            //{
+            //    return result;
+            //}
+
+            if(PasswordService.VerifyPassword(model.Password, result.Password))
             {
                 return result;
             }

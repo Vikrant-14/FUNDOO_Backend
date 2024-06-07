@@ -71,3 +71,4 @@ C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\obj\Debug\net6.0\Fundoo.pdb
 C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\obj\Debug\net6.0\Fundoo.genruntimeconfig.cache
 C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\obj\Debug\net6.0\ref\Fundoo.dll
 C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\BCrypt.Net-Next.dll

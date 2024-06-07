@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "H1uijc7RTPW3ZRbQ15CdjUStGCYIPkzmu1cNJvVKUujTIFkD079/V6Lq/tGBNSWdGiejM6PVUUZVqSnShPKaZQ==",
+  "dgSpecHash": "G5jOOUoKbyPr/scIAeyVlO7uVj+xeAwfCqW2COaCcTRNN1baGExyOF7rqMYUweYf8nrxc77BLpeOuIK7ElmnLw==",
   "success": true,
   "projectFilePath": "C:\\Users\\kirti\\Vikrant\\CDAC\\FUNDOO\\Fundoo\\Fundoo.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kirti\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0.nupkg.sha512",

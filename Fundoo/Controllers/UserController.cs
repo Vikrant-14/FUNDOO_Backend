@@ -2,6 +2,7 @@
 using BusinessLayer.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using ModelLayer;
 using RepositoryLayer.CustomExecption;
 using RepositoryLayer.Utility;
@@ -61,6 +62,11 @@ namespace Fundoo.Controllers
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return StatusCode(400, "Invalid Format");
+                }
+
                 var result = userBL.RegisterNewUser(model);
 
                 if (result != null)
@@ -75,6 +81,13 @@ namespace Fundoo.Controllers
             {
                 responseML.Success = false;
                 responseML.Message = ex.Message;
+                return StatusCode(400, responseML);
+            }
+            catch(SqlException ex)
+            {
+                responseML.Success = false;
+                responseML.Message = ex.Message;
+
                 return StatusCode(400, responseML);
             }
 
@@ -95,6 +108,8 @@ namespace Fundoo.Controllers
                     responseML.Message = "User Login Successfully";
                     responseML.Data = result;
                 }
+
+                return StatusCode(200, responseML);
             }
             catch (UserException ex)
             {
@@ -102,8 +117,13 @@ namespace Fundoo.Controllers
                 responseML.Message = ex.Message;
                 return StatusCode(400, responseML);
             }
+            catch (SqlException ex)
+            {
+                responseML.Success = false;
+                responseML.Message = ex.Message;
 
-            return StatusCode(200, responseML);
+                return StatusCode(400, responseML);
+            }
         }
     }
 }

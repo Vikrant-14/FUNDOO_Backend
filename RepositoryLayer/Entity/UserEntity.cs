@@ -25,7 +25,6 @@ namespace RepositoryLayer.Entity
         public string? Password { get; set; }
 
         [Required(ErrorMessage ="Phone Number required")]
-        
         public long PhoneNumber { get; set; }
 
        
