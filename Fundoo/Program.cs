@@ -17,8 +17,13 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DbFundoo"));
 });
 
+//User
 builder.Services.AddScoped<IUserBL, UserBL>();
 builder.Services.AddScoped<IUserRL, UserRL>();
+
+//Note
+builder.Services.AddScoped<INoteBL, NoteBL>();
+builder.Services.AddScoped<INoteRL, NoteRL>();
 
 builder.Services.AddControllers();
 

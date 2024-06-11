@@ -87,7 +87,7 @@ namespace RepositoryLayer.Service
         public string LoginUser(LoginML model)
         {
             var result = _context.Users.Where(u => u.Email == model.Email).FirstOrDefault();
-
+            
             if (result == null)
             {
                 throw new UserException("Invalid Email/Password");
