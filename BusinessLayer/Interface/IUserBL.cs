@@ -12,6 +12,8 @@ namespace BusinessLayer.Interface
     {
         public UserEntity AddUsers(UserML model);
         public UserEntity RegisterNewUser(UserML model);
-        public UserEntity LoginUser(LoginML model);
+        public string LoginUser(LoginML model);
+        public Role AddRole(Role role);
+        public bool AssignRoleToUser(AddUserRoleML obj);
     }
 }

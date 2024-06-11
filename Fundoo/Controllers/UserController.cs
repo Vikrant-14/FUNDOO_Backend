@@ -1,10 +1,12 @@
 ﻿using BusinessLayer.Interface;
 using BusinessLayer.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using ModelLayer;
 using RepositoryLayer.CustomExecption;
+using RepositoryLayer.Entity;
 using RepositoryLayer.Utility;
 
 namespace Fundoo.Controllers
@@ -100,16 +102,19 @@ namespace Fundoo.Controllers
         {
             try
             {
-                var result = userBL.LoginUser(model);
+                //var result = userBL.LoginUser(model);
 
-                if (result != null)
-                {
-                    responseML.Success = true;
-                    responseML.Message = "User Login Successfully";
-                    responseML.Data = result;
-                }
+                //if (result != null)
+                //{
+                //    responseML.Success = true;
+                //    responseML.Message = "User Login Successfully";
+                //    responseML.Data = result;
+                //}
 
-                return StatusCode(200, responseML);
+                //return StatusCode(200, responseML);
+                var token = userBL.LoginUser(model);
+
+                return Ok(token);
             }
             catch (UserException ex)
             {
@@ -122,6 +127,41 @@ namespace Fundoo.Controllers
                 responseML.Success = false;
                 responseML.Message = ex.Message;
 
+                return StatusCode(400, responseML);
+            }
+        }
+
+        [HttpPost("assignrole")]
+        public IActionResult AssignRoleToUser([FromBody] AddUserRoleML model)
+        {
+            try
+            {
+                var addedUserRole = userBL.AssignRoleToUser(model);
+
+                return Ok(addedUserRole);
+            }
+            catch (UserException ex)
+            {
+                responseML.Success = false;
+                responseML.Message = ex.Message;
+                return StatusCode(400, responseML);
+            }
+        }
+
+        [HttpPost("addrole")]
+        [Authorize(Roles ="Admin")]
+        public IActionResult AddRole([FromBody] Role role)
+        {
+            try
+            {
+                var addedRole = userBL.AddRole(role);
+
+                return Ok(addedRole);
+            }
+            catch(UserException ex)
+            {
+                responseML.Success = false;
+                responseML.Message = ex.Message;
                 return StatusCode(400, responseML);
             }
         }

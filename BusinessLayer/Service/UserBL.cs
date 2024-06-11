@@ -6,6 +6,7 @@ using RepositoryLayer.Interface;
 using RepositoryLayer.Service;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,11 +48,35 @@ namespace BusinessLayer.Service
         }
 
 
-        public UserEntity LoginUser(LoginML model)
+        public string LoginUser(LoginML model)
         {
             try
             {
                 return userRL.LoginUser(model);
+            }
+            catch (UserException)
+            {
+                throw;
+            }
+        }
+
+        public Role AddRole(Role role)
+        {
+            try
+            {
+                return userRL.AddRole(role);
+            }
+            catch (UserException)
+            {
+                throw;
+            }
+        }
+
+        public bool AssignRoleToUser(AddUserRoleML obj)
+        {
+            try
+            {
+                return userRL.AssignRoleToUser(obj);
             }
             catch (UserException)
             {
