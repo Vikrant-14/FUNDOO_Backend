@@ -63,7 +63,7 @@ namespace Fundoo.Controllers
                 responseML.Success = false;
                 responseML.Message = ex.Message;
 
-                return StatusCode(400, responseML);
+                return StatusCode(404, responseML);
             }
         }
 
@@ -108,7 +108,7 @@ namespace Fundoo.Controllers
                 responseML.Success = false;
                 responseML.Message = ex.Message;
 
-                return StatusCode(400, responseML);
+                return StatusCode(404, responseML);
             }
         }
 
@@ -131,7 +131,7 @@ namespace Fundoo.Controllers
                 responseML.Success = false;
                 responseML.Message = ex.Message;
 
-                return StatusCode(400, responseML);
+                return StatusCode(404, responseML);
             }
         }
     }
