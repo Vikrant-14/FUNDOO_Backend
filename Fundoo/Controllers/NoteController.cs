@@ -10,7 +10,7 @@ namespace Fundoo.Controllers
 {
     [Route("api/note")]
     [ApiController]
-    [Authorize]
+    
     public class NoteController : ControllerBase
     {
         private readonly INoteBL noteBL;
@@ -132,6 +132,50 @@ namespace Fundoo.Controllers
                 responseML.Message = ex.Message;
 
                 return StatusCode(404, responseML);
+            }
+        }
+
+        [HttpPatch("archivedpost")]
+        public IActionResult Archived(int id)
+        {
+            try
+            {
+                var note = noteBL.Archived(id);
+
+                responseML.Success = true;
+                responseML.Message = $"Note Id : {id} archived succesfully";
+                responseML.Data = note;
+
+                return StatusCode(200, responseML);
+            }
+            catch(NoteException ex)
+            {
+                responseML.Success = false;
+                responseML.Message = ex.Message;
+
+                return StatusCode(400, responseML);
+            }
+        }
+
+        [HttpPatch("trashedpost")]
+        public IActionResult Trashed(int id)
+        {
+            try
+            {
+                var note = noteBL.Trashed(id);
+
+                responseML.Success = true;
+                responseML.Message = $"Note Id : {id} trashed succesfully";
+                responseML.Data = note;
+
+                return StatusCode(200, responseML);
+            }
+            catch (NoteException ex)
+            {
+                responseML.Success = false;
+                responseML.Message = ex.Message;
+
+                return StatusCode(400, responseML);
             }
         }
     }

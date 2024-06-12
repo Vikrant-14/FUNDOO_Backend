@@ -94,7 +94,52 @@ namespace RepositoryLayer.Service
             return note;
         }
 
+        public Note Archived(int id)
+        {
+            var note = _context.Notes.FirstOrDefault(n => n.Id == id);
 
+            if (note == null)
+            {
+                throw new NoteException($"Note ID : {id} does not exists");
+            }
 
+            if(note.IsTrashed == true)
+            {
+                throw new NoteException($"Note ID : {id} is already trashed; cannot archived");
+            }
+
+            note.IsArchived = !note.IsArchived;
+
+            // note.IsArchived = note.IsArchived ? false : true;
+
+            _context.Notes.Update(note);
+            _context.SaveChanges();
+
+            return note;
+        }
+
+        public Note Trashed(int id)
+        {
+            var note = _context.Notes.FirstOrDefault(n => n.Id == id);
+
+            if (note == null)
+            {
+                throw new NoteException($"Note ID : {id} does not exists");
+            }
+
+            if (note.IsArchived == true)
+            {
+                note.IsArchived = !note.IsArchived;
+            }
+
+            note.IsTrashed = !note.IsTrashed;
+
+            // note.IsTrashed = note.IsTrashed ? false : true;
+
+            _context.Notes.Update(note);
+            _context.SaveChanges();
+
+            return note;
+        }
     }
 }

@@ -15,5 +15,7 @@ namespace BusinessLayer.Interface
         public Note CreateNote(NoteML model);
         public Note UpdateNote(int id, NoteML model);
         public Note DeleteNote(int id);
+        public Note Archived(int id);
+        public Note Trashed(int id);
     }
 }

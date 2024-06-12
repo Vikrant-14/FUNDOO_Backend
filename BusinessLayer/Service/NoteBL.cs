@@ -77,6 +77,28 @@ namespace BusinessLayer.Service
             }
         }
 
+        public Note Archived(int id)
+        {
+            try
+            {
+                return noteRL.Archived(id);
+            }
+            catch (NoteException)
+            {
+                throw;
+            }
+        }
 
+        public Note Trashed(int id)
+        {
+            try
+            {
+                return noteRL.Trashed(id);
+            }
+            catch (NoteException)
+            {
+                throw;
+            }
+        }
     }
 }

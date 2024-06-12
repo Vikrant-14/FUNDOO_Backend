@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.Eventing.Reader;
@@ -20,7 +21,11 @@ namespace RepositoryLayer.Entity
 
         [Required]
         public string Description { get; set; }
+
+        [DefaultValue(false)]
         public bool IsArchived {  get; set; }
+
+        [DefaultValue(false)]
         public bool IsTrashed { get; set; }
     }
 }
