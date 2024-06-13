@@ -212,7 +212,7 @@ namespace RepositoryLayer.Service
             var user = _context.Users.FirstOrDefault(s => s.Email == email);
             if (user == null)
             {
-                throw new UserException("Invalid Email");
+                throw new UserException("Invalid Credentials");
             }
 
             user.Password = PasswordService.HashPassword(password);
