@@ -109,7 +109,7 @@ namespace RepositoryLayer.Service
             }
 
             note.IsArchived = !note.IsArchived;
-
+  
             // note.IsArchived = note.IsArchived ? false : true;
 
             _context.Notes.Update(note);

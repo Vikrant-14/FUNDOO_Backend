@@ -15,6 +15,8 @@ namespace RepositoryLayer.Interface
         public string LoginUser(LoginML model);
         public Role AddRole(Role role);
         public bool AssignRoleToUser(AddUserRoleML obj);
+        public void ForgetPassword(string email);
+        public void ResetPassword(string email, string password);
 
     }
 }

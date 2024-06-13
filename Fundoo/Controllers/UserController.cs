@@ -8,6 +8,8 @@ using ModelLayer;
 using RepositoryLayer.CustomExecption;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Utility;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace Fundoo.Controllers
 {
@@ -102,19 +104,13 @@ namespace Fundoo.Controllers
         {
             try
             {
-                //var result = userBL.LoginUser(model);
-
-                //if (result != null)
-                //{
-                //    responseML.Success = true;
-                //    responseML.Message = "User Login Successfully";
-                //    responseML.Data = result;
-                //}
-
-                //return StatusCode(200, responseML);
                 var token = userBL.LoginUser(model);
 
-                return Ok(token);
+                responseML.Success = true;
+                responseML.Message = "User Login Successfully";
+                responseML.Data = token;
+
+                return StatusCode(200, responseML);
             }
             catch (UserException ex)
             {
@@ -157,6 +153,52 @@ namespace Fundoo.Controllers
                 var addedRole = userBL.AddRole(role);
 
                 return Ok(addedRole);
+            }
+            catch(UserException ex)
+            {
+                responseML.Success = false;
+                responseML.Message = ex.Message;
+                return StatusCode(400, responseML);
+            }
+        }
+
+        [HttpGet("forget-password/{email}")]
+        public IActionResult ForgetPassword(string email)
+        {
+            try
+            {
+                userBL.ForgetPassword(email);
+
+                responseML.Success = true;
+                responseML.Message = "Email Sent Successfully";
+
+                return Ok(responseML);
+            }
+            catch (UserException ex)
+            {
+                responseML.Success = false;
+                responseML.Message = ex.Message;
+                return StatusCode(400, responseML);
+            }
+        }
+
+        [HttpPost("reset-password/{token}")]
+        public IActionResult ResetPassword(string token, [FromBody] ResetPasswordML model)
+        {
+            try
+            {
+                var handler = new JwtSecurityTokenHandler();
+                var jwtToken = handler.ReadJwtToken(token);
+                var emailClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "Email")?.Value;
+
+                Console.WriteLine(emailClaim);
+
+                userBL.ResetPassword(emailClaim, model.Password);
+
+                responseML.Success = true;
+                responseML.Message = "Password Changed Successfully";
+
+                return StatusCode(200,responseML);
             }
             catch(UserException ex)
             {

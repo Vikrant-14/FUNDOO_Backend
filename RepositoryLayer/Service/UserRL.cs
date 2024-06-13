@@ -185,5 +185,40 @@ namespace RepositoryLayer.Service
 
             return true;
         }
+
+
+        public void ForgetPassword(string email) 
+        {
+            var result = _context.Users.Where(s => s.Email == email).FirstOrDefault();
+
+            if(result == null)
+            {
+                throw new UserException("No such user found");
+            }
+
+            var jwtToken = JwtTokenGenerator.GenerateToken(_context, _configuration, result);
+
+            EmailML model = new EmailML();
+            model.To = result.Email;
+            model.Subject = "Reset Password";
+            model.Body = "http://localhost:5264/api/user/reset-password/" + jwtToken;//url
+
+            EmailService.SendEmail(model, _configuration);
+        }
+
+
+        public void ResetPassword(string email, string password) 
+        {
+            var user = _context.Users.FirstOrDefault(s => s.Email == email);
+            if (user == null)
+            {
+                throw new UserException("Invalid Email");
+            }
+
+            user.Password = PasswordService.HashPassword(password);
+
+            _context.Users.Update(user);
+            _context.SaveChanges();
+        }
     }
 }

@@ -73,3 +73,9 @@ C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\obj\Debug\net6.0\ref\Fundoo.dll
 C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\BCrypt.Net-Next.dll
 C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\MailKit.dll
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\MimeKit.dll
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\System.Formats.Asn1.dll
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
