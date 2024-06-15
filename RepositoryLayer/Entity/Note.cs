@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace RepositoryLayer.Entity
@@ -27,5 +28,7 @@ namespace RepositoryLayer.Entity
 
         [DefaultValue(false)]
         public bool IsTrashed { get; set; }
+        [JsonIgnore]
+        public ICollection<NoteLabelEntity> NoteLabel { get; set; }
     }
 }

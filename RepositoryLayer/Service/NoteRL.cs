@@ -1,4 +1,5 @@
-﻿using ModelLayer;
+﻿using Microsoft.EntityFrameworkCore;
+using ModelLayer;
 using RepositoryLayer.Context;
 using RepositoryLayer.CustomExecption;
 using RepositoryLayer.Entity;
@@ -133,6 +134,11 @@ namespace RepositoryLayer.Service
             }
 
             note.IsTrashed = !note.IsTrashed;
+
+            if(note.IsTrashed == false) 
+            {
+                note.IsArchived = !note.IsArchived;
+            }
 
             // note.IsTrashed = note.IsTrashed ? false : true;
 

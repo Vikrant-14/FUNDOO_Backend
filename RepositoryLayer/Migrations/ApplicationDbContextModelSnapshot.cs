@@ -21,6 +21,23 @@ namespace RepositoryLayer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("RepositoryLayer.Entity.Label", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("LabelName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Labels");
+                });
+
             modelBuilder.Entity("RepositoryLayer.Entity.Note", b =>
                 {
                     b.Property<int>("Id")
@@ -46,6 +63,21 @@ namespace RepositoryLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Notes");
+                });
+
+            modelBuilder.Entity("RepositoryLayer.Entity.NoteLabelEntity", b =>
+                {
+                    b.Property<int>("NoteId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LabelId")
+                        .HasColumnType("int");
+
+                    b.HasKey("NoteId", "LabelId");
+
+                    b.HasIndex("LabelId");
+
+                    b.ToTable("NoteLabelEntities");
                 });
 
             modelBuilder.Entity("RepositoryLayer.Entity.Role", b =>
@@ -112,6 +144,35 @@ namespace RepositoryLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserRoles");
+                });
+
+            modelBuilder.Entity("RepositoryLayer.Entity.NoteLabelEntity", b =>
+                {
+                    b.HasOne("RepositoryLayer.Entity.Label", "Label")
+                        .WithMany("NoteLabel")
+                        .HasForeignKey("LabelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RepositoryLayer.Entity.Note", "Note")
+                        .WithMany("NoteLabel")
+                        .HasForeignKey("NoteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Label");
+
+                    b.Navigation("Note");
+                });
+
+            modelBuilder.Entity("RepositoryLayer.Entity.Label", b =>
+                {
+                    b.Navigation("NoteLabel");
+                });
+
+            modelBuilder.Entity("RepositoryLayer.Entity.Note", b =>
+                {
+                    b.Navigation("NoteLabel");
                 });
 #pragma warning restore 612, 618
         }

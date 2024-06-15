@@ -25,6 +25,14 @@ builder.Services.AddScoped<IUserRL, UserRL>();
 builder.Services.AddScoped<INoteBL, NoteBL>();
 builder.Services.AddScoped<INoteRL, NoteRL>();
 
+//Label
+builder.Services.AddScoped<ILabelBL, LabelBL>();
+builder.Services.AddScoped<ILabelRL, LabelRL>();
+
+//NoteLabel
+builder.Services.AddScoped<INoteLabelBL, NoteLabelBL>();
+builder.Services.AddScoped<INoteLabelRL, NoteLabelRL>();
+
 builder.Services.AddControllers();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>

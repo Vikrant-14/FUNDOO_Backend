@@ -68,7 +68,7 @@ namespace Fundoo.Controllers
         }
 
         [HttpGet("getallnotes")]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public ActionResult<List<Note>> GetNotes()
         {
             try
@@ -113,7 +113,7 @@ namespace Fundoo.Controllers
         }
 
         [HttpDelete("deletebyid")]
-        [Authorize(Roles ="Admin")]
+        //[Authorize(Roles ="Admin")]
         public IActionResult DeleteNote(int id)
         {
             try
