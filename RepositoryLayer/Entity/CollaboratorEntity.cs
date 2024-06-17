@@ -18,5 +18,5 @@ namespace RepositoryLayer.Entity
         public string CollaboratorEmail { get; set; } = string.Empty;
         public int NoteId { get; set; }
         public Note? Note { get; set; }       
-    }
+    } 
 }
