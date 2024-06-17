@@ -22,11 +22,11 @@ namespace Fundoo.Controllers
         }
 
         [HttpPost("Add-notelabel")]
-        public IActionResult AddNoteToLabel(NoteLabelML model) 
+        public IActionResult AddLabelToNote(NoteLabelML model) 
         {
             try
             {
-                var result = noteLabelBL.AddNoteToLabel(model); 
+                var result = noteLabelBL.AddLabelToNote(model); 
 
                 responseML.Success = true;
                 responseML.Message = "Label added to note successfully";
@@ -109,11 +109,11 @@ namespace Fundoo.Controllers
         }
 
         [HttpDelete("delete-notelabel")]
-        public IActionResult RemoveNoteFromLabel(NoteLabelML model)
+        public IActionResult RemoveLabelFromNote(NoteLabelML model)
         {
             try
             {
-                var result = noteLabelBL.RemoveNoteFromLabel(model);
+                var result = noteLabelBL.RemoveLabelFromNote(model);
 
                 responseML.Success = true;
                 responseML.Message = "Label remove from note successfully";

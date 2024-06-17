@@ -33,6 +33,10 @@ builder.Services.AddScoped<ILabelRL, LabelRL>();
 builder.Services.AddScoped<INoteLabelBL, NoteLabelBL>();
 builder.Services.AddScoped<INoteLabelRL, NoteLabelRL>();
 
+//Collaborator
+builder.Services.AddScoped<ICollaboratorBL, CollaboratorBL>();
+builder.Services.AddScoped<ICollaboratorRL, CollaboratorRL>();
+
 builder.Services.AddControllers();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>

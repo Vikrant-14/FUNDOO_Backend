@@ -19,11 +19,11 @@ namespace BusinessLayer.Service
         {
             this.noteLabelRL = noteLabelRL;
         }
-        public NoteLabelEntity AddNoteToLabel(NoteLabelML model)
+        public NoteLabelEntity AddLabelToNote(NoteLabelML model)
         {
             try
             {
-                return noteLabelRL.AddNoteToLabel(model);
+                return noteLabelRL.AddLabelToNote(model);
             }
             catch (NoteLabelException)
             {
@@ -55,11 +55,11 @@ namespace BusinessLayer.Service
             }
         }
 
-        public NoteLabelEntity RemoveNoteFromLabel(NoteLabelML model)
+        public NoteLabelEntity RemoveLabelFromNote(NoteLabelML model)
         {
             try
             {
-                return noteLabelRL.RemoveNoteFromLabel(model);
+                return noteLabelRL.RemoveLabelFromNote(model);
             }
             catch (NoteLabelException)
             {

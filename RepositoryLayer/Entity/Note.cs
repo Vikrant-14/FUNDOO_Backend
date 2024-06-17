@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -30,5 +31,7 @@ namespace RepositoryLayer.Entity
         public bool IsTrashed { get; set; }
         [JsonIgnore]
         public ICollection<NoteLabelEntity> NoteLabel { get; set; }
+        [JsonIgnore]
+        public ICollection<CollaboratorEntity> Collaborators { get; set; }
     }
 }

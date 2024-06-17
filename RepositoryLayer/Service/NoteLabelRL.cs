@@ -21,7 +21,7 @@ namespace RepositoryLayer.Service
             _context = context;
         }
 
-        public NoteLabelEntity AddNoteToLabel(NoteLabelML model)
+        public NoteLabelEntity AddLabelToNote(NoteLabelML model)
         {
             var note = _context.Notes.FirstOrDefault(n => n.Id == model.NoteId);
             var label = _context.Labels.FirstOrDefault(l => l.Id == model.LabelId);
@@ -71,7 +71,7 @@ namespace RepositoryLayer.Service
             return notes;
         }
 
-        public NoteLabelEntity RemoveNoteFromLabel(NoteLabelML model)
+        public NoteLabelEntity RemoveLabelFromNote(NoteLabelML model)
         {
             var note = _context.Notes.FirstOrDefault(n => n.Id == model.NoteId);
             var label = _context.Labels.FirstOrDefault(l => l.Id == model.LabelId);

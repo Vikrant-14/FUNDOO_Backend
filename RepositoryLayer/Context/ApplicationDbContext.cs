@@ -18,6 +18,7 @@ namespace RepositoryLayer.Context
         public DbSet<Note> Notes { get; set; }
         public DbSet<Label> Labels { get; set; }
         public DbSet<NoteLabelEntity> NoteLabelEntities { get; set; }
+        public DbSet<CollaboratorEntity> Collaborators { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

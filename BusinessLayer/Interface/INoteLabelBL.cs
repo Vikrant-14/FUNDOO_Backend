@@ -10,8 +10,8 @@ namespace BusinessLayer.Interface
 {
     public interface INoteLabelBL 
     {
-        public NoteLabelEntity AddNoteToLabel(NoteLabelML model);
-        public NoteLabelEntity RemoveNoteFromLabel(NoteLabelML model);
+        public NoteLabelEntity AddLabelToNote(NoteLabelML model);
+        public NoteLabelEntity RemoveLabelFromNote(NoteLabelML model);
         public IEnumerable<Note> GetNoteFromLabel(int LabelID);
         public IEnumerable<Label> GetLabelFromNote(int NoteID);
     }
