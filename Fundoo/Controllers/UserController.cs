@@ -134,7 +134,10 @@ namespace Fundoo.Controllers
             {
                 var addedUserRole = userBL.AssignRoleToUser(model);
 
-                return Ok(addedUserRole);
+                responseML.Success = addedUserRole;
+                responseML.Message = "Role added Succefully";
+
+                return StatusCode(200,responseML);  
             }
             catch (UserException ex)
             {

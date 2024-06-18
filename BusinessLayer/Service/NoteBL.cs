@@ -30,6 +30,18 @@ namespace BusinessLayer.Service
                 throw;
             }
         }
+
+        public Task<Note> CreateNoteAsync(NoteML model) 
+        {
+            try
+            {
+                return noteRL.CreateNoteAsync(model);
+            }
+            catch (NoteException)
+            {
+                throw;
+            }
+        }
         public Note UpdateNote(int id, NoteML model)
         {
             try

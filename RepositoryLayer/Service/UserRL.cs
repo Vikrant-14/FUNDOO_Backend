@@ -100,47 +100,12 @@ namespace RepositoryLayer.Service
 
             if(PasswordService.VerifyPassword(model.Password, result.Password))
             {
-                //return result; 
-                
-                //jwt token return 
-
-                var claims = new List<Claim> 
-                {
-                    new Claim(JwtRegisteredClaimNames.Sub, _configuration["JWT:Subject"]),
-                    new Claim("Id", result.Id.ToString()),
-                    new Claim("Email", result.Email)
-                };
-
-                var userRoles = _context.UserRoles.Where(u => u.UserId == result.Id).ToList();
-                var roleIds = userRoles.Select(s => s.RoleId).ToList();
-                var roles = _context.Roles.Where(r => roleIds.Contains(r.Id)).ToList();
-
-                foreach (var role in roles)
-                {
-                    claims.Add(new Claim(ClaimTypes.Role, role.Name));
-                }
-
-                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Key"]));
-                var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-                var token = new JwtSecurityToken(
-                        _configuration["JWT:Issuer"],
-                        _configuration["JWT:Audience"],
-                        claims,
-                        expires: DateTime.UtcNow.AddMinutes(10),
-                        signingCredentials: signIn
-                    );
-
-                var jwtToken = new JwtSecurityTokenHandler().WriteToken(token);
-
-                return jwtToken;
+                return JwtTokenGenerator.GenerateToken(_context,_configuration,result);
             }
             else
             {
                 throw new UserException("Invalid Email/Password");
             }
-
-
-            //return result;
         }
 
         public Role AddRole(Role role)
@@ -203,7 +168,7 @@ namespace RepositoryLayer.Service
             model.Subject = "Reset Password";
             model.Body = "http://localhost:5264/api/user/reset-password/" + jwtToken;//url
 
-            EmailService.SendEmail(model, _configuration);
+            EmailService.SendEmail(model, _configuration); 
         }
 
 

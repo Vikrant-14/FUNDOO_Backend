@@ -21,7 +21,7 @@ namespace RepositoryLayer.Service
             _context = context;
         }
 
-        public Note CreateNote(NoteML model)
+        public  Note CreateNote(NoteML model)
         {
             Note note = new Note();
 
@@ -32,6 +32,21 @@ namespace RepositoryLayer.Service
 
             _context.Notes.Add(note);
             _context.SaveChanges();
+
+            return note;
+        }
+
+        public async Task<Note> CreateNoteAsync(NoteML model)
+        {
+            Note note = new Note();
+
+            note.Title = model.Title;
+            note.Description = model.Description;
+            note.IsArchived = model.IsArchived;
+            note.IsTrashed = model.IsTrashed;
+
+            await _context.Notes.AddAsync(note);
+            await _context.SaveChangesAsync();
 
             return note;
         }

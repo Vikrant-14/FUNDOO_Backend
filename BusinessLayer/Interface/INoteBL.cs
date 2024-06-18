@@ -13,6 +13,7 @@ namespace BusinessLayer.Interface
         public List<Note> GetNotes();
         public Note GetNoteById(int id);
         public Note CreateNote(NoteML model);
+        public Task<Note> CreateNoteAsync(NoteML model);
         public Note UpdateNote(int id, NoteML model);
         public Note DeleteNote(int id);
         public Note Archived(int id);

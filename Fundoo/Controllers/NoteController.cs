@@ -44,6 +44,28 @@ namespace Fundoo.Controllers
             }
         }
 
+        [HttpPost("create-note-async")]
+        public async Task<ActionResult> CreateNoteAsync(NoteML model)
+        {
+            try
+            {
+                var note = await noteBL.CreateNoteAsync(model);
+
+                responseML.Success = true;
+                responseML.Message = "Note Created Successfully";
+                responseML.Data = note;
+
+                return StatusCode(201, responseML);
+            }
+            catch (NoteException ex)
+            {
+                responseML.Success = false;
+                responseML.Message = "Error Occurred while creating note";
+
+                return StatusCode(400, responseML);
+            }
+        }
+
 
         [HttpPut("updatenote/{id}")]
         public IActionResult UpdateNote(int id, [FromBody] NoteML noteML)

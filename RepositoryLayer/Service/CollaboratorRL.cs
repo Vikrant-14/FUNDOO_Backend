@@ -49,7 +49,7 @@ namespace RepositoryLayer.Service
 
         public IList<CollaboratorEntity> GetCollaborators(int NoteId)
         {
-            var note = _context.Notes.FirstOrDefault(n => n.Id == NoteId);
+            //var note = _context.Notes.FirstOrDefault(n => n.Id == NoteId);
 
             var collaborators = _context.Collaborators.Where(n => n.NoteId == NoteId).ToList();
             if (collaborators.Count() == 0)
