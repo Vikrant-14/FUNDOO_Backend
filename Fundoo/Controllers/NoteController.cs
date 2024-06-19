@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Interface;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer;
@@ -10,7 +11,6 @@ namespace Fundoo.Controllers
 {
     [Route("api/note")]
     [ApiController]
-    
     public class NoteController : ControllerBase
     {
         private readonly INoteBL noteBL;
@@ -89,6 +89,7 @@ namespace Fundoo.Controllers
             }
         }
 
+        [EnableCors("AnotherCorsPolicy")]
         [HttpGet("getallnotes")]
         //[Authorize(Roles = "Admin")]
         public ActionResult<List<Note>> GetNotes()
@@ -219,7 +220,29 @@ namespace Fundoo.Controllers
                 responseML.Success = false;
                 responseML.Message = ex.Message;
 
-                return StatusCode(400, responseML);
+                return StatusCode(404, responseML);
+            }
+        }
+
+        [HttpGet("get-all-archived")]
+        public IActionResult GetAllArchivedNotes()
+        {
+            try
+            {
+                var note = noteBL.GetAllArchivedNotes();
+
+                responseML.Success = true;
+                responseML.Message = "Note Fetch Successfully from archived";
+                responseML.Data = note;
+
+                return StatusCode(200, responseML);
+            }
+            catch (NoteException ex)
+            {
+                responseML.Success = false;
+                responseML.Message = ex.Message;
+
+                return StatusCode(404, responseML);
             }
         }
     }

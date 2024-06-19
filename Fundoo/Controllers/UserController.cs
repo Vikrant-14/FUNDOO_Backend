@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Interface;
 using BusinessLayer.Service;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -60,7 +61,7 @@ namespace Fundoo.Controllers
             return StatusCode(200, responseML);
         }
 
-
+        [EnableCors("CorsPolicy")]
         [HttpPost("register")]
         public IActionResult RegisterNewUser(UserML model)
         {

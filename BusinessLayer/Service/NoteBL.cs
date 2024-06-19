@@ -124,5 +124,17 @@ namespace BusinessLayer.Service
                 throw;
             }
         }
+
+        public IList<Note> GetAllArchivedNotes()
+        {
+            try
+            {
+                return noteRL.GetAllArchivedNotes();
+            }
+            catch (NoteException)
+            {
+                throw;
+            }
+        }
     }
 }

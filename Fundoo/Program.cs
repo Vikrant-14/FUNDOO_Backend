@@ -85,6 +85,25 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+//CORS
+const string policyName = "CorsPolicy";
+const string anotherName = "AnotherCorsPolicy";
+
+builder.Services.AddCors(options => {
+    options.AddPolicy(name: policyName, builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+
+    options.AddPolicy(name: anotherName, builder => 
+    {
+        builder.WithOrigins("http://localhost:5264")
+            .WithMethods("GET", "POST")
+            .WithHeaders("*");
+    });
+});
 
 var app = builder.Build();
 
@@ -101,6 +120,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseMiddleware<GlobalExceptionHandler>();
 
+app.UseCors(policyName);
+app.UseCors(anotherName);
 app.UseAuthentication();
 
 app.UseAuthorization();

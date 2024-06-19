@@ -174,5 +174,17 @@ namespace RepositoryLayer.Service
 
             return notes;
         }
+
+        public IList<Note> GetAllArchivedNotes() 
+        {
+            var notes = _context.Notes.Where(n => n.IsArchived == true).ToList();
+
+            if (notes.Count == 0)
+            {
+                throw new NoteException("No Notes archived");
+            }
+
+            return notes;
+        }
     }
 }
