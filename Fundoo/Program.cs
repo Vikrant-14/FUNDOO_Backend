@@ -105,6 +105,7 @@ builder.Services.AddCors(options => {
     });
 });
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -122,6 +123,7 @@ app.UseMiddleware<GlobalExceptionHandler>();
 
 app.UseCors(policyName);
 app.UseCors(anotherName);
+
 app.UseAuthentication();
 
 app.UseAuthorization();
