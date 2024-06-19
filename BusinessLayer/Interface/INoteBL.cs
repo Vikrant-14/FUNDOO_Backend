@@ -18,5 +18,6 @@ namespace BusinessLayer.Interface
         public Note DeleteNote(int id);
         public Note Archived(int id);
         public Note Trashed(int id);
+        public IList<Note> GetAllTrashedNotes();
     }
 }

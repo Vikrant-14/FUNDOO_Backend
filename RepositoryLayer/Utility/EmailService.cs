@@ -7,7 +7,7 @@ using MailKit.Net.Smtp;
 using MailKit.Security;
 
 namespace RepositoryLayer.Utility
-{
+{ 
     public class EmailService
     {
         public static void SendEmail(EmailML model, IConfiguration config)

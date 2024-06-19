@@ -162,5 +162,17 @@ namespace RepositoryLayer.Service
 
             return note;
         }
+
+        public IList<Note> GetAllTrashedNotes() 
+        {
+            var notes = _context.Notes.Where(n => n.IsTrashed == true).ToList();
+
+            if(notes.Count == 0)
+            {
+                throw new NoteException("No Notes inside trashed");
+            }
+
+            return notes;
+        }
     }
 }

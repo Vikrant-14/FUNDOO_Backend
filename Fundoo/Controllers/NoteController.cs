@@ -200,5 +200,27 @@ namespace Fundoo.Controllers
                 return StatusCode(400, responseML);
             }
         }
+
+        [HttpGet("get-all-trashed")]
+        public IActionResult GetAllTrashedNotes()
+        {
+            try
+            {
+                var note = noteBL.GetAllTrashedNotes();
+
+                responseML.Success = true;
+                responseML.Message = "Note Fetch Successfully from Trashed";
+                responseML.Data = note;
+
+                return StatusCode(200, responseML);
+            }
+            catch (NoteException ex)
+            {
+                responseML.Success = false;
+                responseML.Message = ex.Message;
+
+                return StatusCode(400, responseML);
+            }
+        }
     }
 }
