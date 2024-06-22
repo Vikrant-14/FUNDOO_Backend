@@ -107,5 +107,17 @@ namespace BusinessLayer.Service
                 throw;
             }
         }
+
+        public UserEntity GetUserById(int id)
+        {
+            try
+            {
+                return userRL.GetUserById(id);
+            }
+            catch (UserException)
+            {
+                throw;
+            }
+        }
     }
 }

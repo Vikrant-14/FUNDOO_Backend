@@ -40,6 +40,7 @@ builder.Services.AddScoped<ICollaboratorRL, CollaboratorRL>();
 
 builder.Services.AddControllers();
 
+//Authentication(JWT)
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
     options.RequireHttpsMetadata = false;
@@ -105,6 +106,15 @@ builder.Services.AddCors(options => {
     });
 });
 
+//Session
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession( options => { 
+    options.IdleTimeout = TimeSpan.FromSeconds(60);
+    options.Cookie.Name = "FundooCookie";
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 
 var app = builder.Build();
 
@@ -121,12 +131,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseMiddleware<GlobalExceptionHandler>();
 
-app.UseCors(policyName);
-app.UseCors(anotherName);
+app.UseCors();
 
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllers();
 

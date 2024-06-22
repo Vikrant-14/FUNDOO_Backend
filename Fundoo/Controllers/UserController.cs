@@ -21,6 +21,9 @@ namespace Fundoo.Controllers
         private readonly IUserBL userBL;
         private readonly ResponseML responseML;
 
+        const string SessionUserId = "_UserId";
+        const string SessionUserName = "_UserName";
+
         public UserController(IUserBL userBL)
         {
             this.userBL = userBL;
@@ -209,6 +212,30 @@ namespace Fundoo.Controllers
                 responseML.Success = false;
                 responseML.Message = ex.Message;
                 return StatusCode(400, responseML);
+            }
+        }
+
+        [HttpGet("get-user-by-Id/{id}")]
+        public IActionResult GetUserById(int id) 
+        {
+            try
+            {
+                var result = userBL.GetUserById(id);
+
+                HttpContext.Session.SetInt32(SessionUserId,result.Id);
+                HttpContext.Session.SetString(SessionUserName,result.Name); 
+
+                responseML.Success = true;
+                responseML.Message = $"User Id : {id} found successfully";
+                responseML.Data = result;
+
+                return StatusCode(200,responseML);
+            }
+            catch (UserException ex) 
+            {
+                responseML.Success = false;
+                responseML.Message = ex.Message;
+                return StatusCode(404, responseML);
             }
         }
     }

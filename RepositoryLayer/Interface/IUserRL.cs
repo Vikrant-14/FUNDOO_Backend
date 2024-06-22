@@ -17,6 +17,6 @@ namespace RepositoryLayer.Interface
         public bool AssignRoleToUser(AddUserRoleML obj);
         public void ForgetPassword(string email);
         public void ResetPassword(string email, string password);
-
+        public UserEntity GetUserById(int id);
     }
 }

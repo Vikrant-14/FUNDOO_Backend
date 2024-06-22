@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ModelLayer;
 using RepositoryLayer.Context;
@@ -184,6 +185,19 @@ namespace RepositoryLayer.Service
 
             _context.Users.Update(user);
             _context.SaveChanges();
+        }
+
+
+        public UserEntity GetUserById(int id)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.Id == id);
+
+            if (user == null)
+            {
+                throw new UserException($"User Id : {id} not found");
+            }
+            
+            return user;
         }
     }
 }
