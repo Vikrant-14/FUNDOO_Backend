@@ -11,6 +11,7 @@ namespace Fundoo.Controllers
 {
     [Route("api/note")]
     [ApiController]
+    [EnableCors]
     public class NoteController : ControllerBase
     {
         private readonly INoteBL noteBL;

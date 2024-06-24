@@ -100,7 +100,7 @@ builder.Services.AddCors(options => {
 
     options.AddPolicy(name: anotherName, builder => 
     {
-        builder.WithOrigins("http://localhost:5264")
+        builder.WithOrigins("https://dotnettutorials.net")
             .WithMethods("GET", "POST")
             .WithHeaders("*");
     });

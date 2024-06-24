@@ -5,6 +5,7 @@ using RepositoryLayer.Context;
 using RepositoryLayer.CustomExecption;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
+using RepositoryLayer.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,81 +73,53 @@ namespace RepositoryLayer.Service
             _context.Notes.Update(note);
             _context.SaveChanges();
 
+            _cache.Remove("GET_ALL_NOTES");
+            
             return note;
         }
 
         public Note GetNoteById(int id)
         {
             var cacheKey = $"Note_{id}";
-            Note note;
 
-            //Get data from cache
-            var cachedData = _cache.Get(cacheKey);
+            var note = RedisCacheHelper.GetFromCache<Note>(cacheKey, _cache);
 
-            if (cachedData != null)
+            if (note != null)
             {
-                var cachedDataString = Encoding.UTF8.GetString(cachedData); 
-                note = JsonSerializer.Deserialize<Note>(cachedDataString);
+                return note;
             }
-            else
+
+            note = _context.Notes.FirstOrDefault(n => n.Id == id);
+
+            if (note == null)
             {
-                note = _context.Notes.FirstOrDefault(n => n.Id == id);
-
-                if (note == null)
-                {
-                    throw new NoteException($"Note ID : {id} does not exists");
-                }
-
-                //Serialize Data
-                var cachedDataString = JsonSerializer.Serialize<Note>(note);
-                var newDataToCache = Encoding.UTF8.GetBytes(cachedDataString);
-
-                //Set Cache options
-                var options = new DistributedCacheEntryOptions()
-                                .SetAbsoluteExpiration(DateTime.Now.AddHours(24))
-                                .SetSlidingExpiration(TimeSpan.FromHours(12));
-
-                //Add Data to cache
-                _cache.Set(cacheKey, newDataToCache, options);
+                throw new NoteException($"Note ID : {id} does not exists");
             }
+            
+            RedisCacheHelper.SetToCache(cacheKey, _cache, note, 30, 15);
+
             return note;
         }
 
         public List<Note> GetNotes()
         {
             var cacheKey = "GET_ALL_NOTES";
-            List<Note> notes;
 
-            //Get data from cache 
-            var cachedData = _cache.Get(cacheKey);
+            var notes = RedisCacheHelper.GetFromCache<List<Note>>(cacheKey, _cache);
 
-            if (cachedData != null)
+            if (notes != null)
             {
-                // If data found in cache, encode and deserialize cached data
-                var cachedDataString = Encoding.UTF8.GetString(cachedData);
-                notes = JsonSerializer.Deserialize<List<Note>>(cachedDataString);
+                return notes.ToList();
             }
-            else
+
+            notes = _context.Notes.ToList();
+
+            if (notes == null)
             {
-                notes = _context.Notes.ToList();
-
-                if (notes == null)
-                {
-                    throw new NoteException("No Note List Exists");
-                }
-
-                //Serialize Data
-                var cachedDataString = JsonSerializer.Serialize(notes);
-                var newDataToCache = Encoding.UTF8.GetBytes(cachedDataString);
-
-                //Set Cache options
-                var options = new DistributedCacheEntryOptions()
-                                .SetAbsoluteExpiration(DateTime.Now.AddMinutes(2))
-                                .SetSlidingExpiration(TimeSpan.FromMinutes(1));
-
-                //Add data in cache
-                _cache.Set(cacheKey, newDataToCache, options);
+                throw new NoteException("No Note List Exists");
             }
+
+            RedisCacheHelper.SetToCache(cacheKey,_cache,notes);
 
             return notes;
         }
@@ -162,6 +135,8 @@ namespace RepositoryLayer.Service
 
             _context.Notes.Remove(note);
             _context.SaveChanges();
+
+            _cache.Remove("GET_ALL_NOTES");
 
             return note;
         }
