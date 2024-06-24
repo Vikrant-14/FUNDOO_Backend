@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
 using ModelLayer;
 using RepositoryLayer.Context;
 using RepositoryLayer.CustomExecption;
@@ -8,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace RepositoryLayer.Service
@@ -15,10 +17,12 @@ namespace RepositoryLayer.Service
     public class NoteRL : INoteRL
     {
         private readonly ApplicationDbContext _context;
+        private readonly IDistributedCache _cache;
 
-        public NoteRL(ApplicationDbContext context)
+        public NoteRL(ApplicationDbContext context, IDistributedCache cache)
         {
             _context = context;
+            _cache = cache;
         }
 
         public  Note CreateNote(NoteML model)
@@ -73,23 +77,75 @@ namespace RepositoryLayer.Service
 
         public Note GetNoteById(int id)
         {
-            var note = _context.Notes.FirstOrDefault(n => n.Id == id);
+            var cacheKey = $"Note_{id}";
+            Note note;
 
-            if(note == null)
+            //Get data from cache
+            var cachedData = _cache.Get(cacheKey);
+
+            if (cachedData != null)
             {
-                throw new NoteException($"Note ID : {id} does not exists");
+                var cachedDataString = Encoding.UTF8.GetString(cachedData); 
+                note = JsonSerializer.Deserialize<Note>(cachedDataString);
             }
+            else
+            {
+                note = _context.Notes.FirstOrDefault(n => n.Id == id);
 
+                if (note == null)
+                {
+                    throw new NoteException($"Note ID : {id} does not exists");
+                }
+
+                //Serialize Data
+                var cachedDataString = JsonSerializer.Serialize<Note>(note);
+                var newDataToCache = Encoding.UTF8.GetBytes(cachedDataString);
+
+                //Set Cache options
+                var options = new DistributedCacheEntryOptions()
+                                .SetAbsoluteExpiration(DateTime.Now.AddHours(24))
+                                .SetSlidingExpiration(TimeSpan.FromHours(12));
+
+                //Add Data to cache
+                _cache.Set(cacheKey, newDataToCache, options);
+            }
             return note;
         }
 
         public List<Note> GetNotes()
         {
-            var notes = _context.Notes.ToList();
+            var cacheKey = "GET_ALL_NOTES";
+            List<Note> notes;
 
-            if( notes == null)
+            //Get data from cache 
+            var cachedData = _cache.Get(cacheKey);
+
+            if (cachedData != null)
             {
-                throw new NoteException("No Note List Exists");
+                // If data found in cache, encode and deserialize cached data
+                var cachedDataString = Encoding.UTF8.GetString(cachedData);
+                notes = JsonSerializer.Deserialize<List<Note>>(cachedDataString);
+            }
+            else
+            {
+                notes = _context.Notes.ToList();
+
+                if (notes == null)
+                {
+                    throw new NoteException("No Note List Exists");
+                }
+
+                //Serialize Data
+                var cachedDataString = JsonSerializer.Serialize(notes);
+                var newDataToCache = Encoding.UTF8.GetBytes(cachedDataString);
+
+                //Set Cache options
+                var options = new DistributedCacheEntryOptions()
+                                .SetAbsoluteExpiration(DateTime.Now.AddMinutes(2))
+                                .SetSlidingExpiration(TimeSpan.FromMinutes(1));
+
+                //Add data in cache
+                _cache.Set(cacheKey, newDataToCache, options);
             }
 
             return notes;

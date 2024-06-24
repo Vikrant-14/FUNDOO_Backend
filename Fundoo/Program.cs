@@ -115,6 +115,12 @@ builder.Services.AddSession( options => {
     options.Cookie.IsEssential = true;
 });
 
+//Redis
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration["RedisCacheOptions:Configuration"];
+    options.InstanceName = builder.Configuration["RedisCacheOptions:InstanceName"];
+});
 
 var app = builder.Build();
 
