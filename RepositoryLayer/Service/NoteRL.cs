@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using ModelLayer;
+using Org.BouncyCastle.Utilities;
 using RepositoryLayer.Context;
 using RepositoryLayer.CustomExecption;
 using RepositoryLayer.Entity;
@@ -19,7 +20,7 @@ namespace RepositoryLayer.Service
     {
         private readonly ApplicationDbContext _context;
         private readonly IDistributedCache _cache;
-
+        string cacheKey = "GET_ALL_NOTES";
         public NoteRL(ApplicationDbContext context, IDistributedCache cache)
         {
             _context = context;
@@ -38,6 +39,9 @@ namespace RepositoryLayer.Service
             _context.Notes.Add(note);
             _context.SaveChanges();
 
+            var noteList = _context.Notes.ToList();
+            RedisCacheHelper.SetToCache(cacheKey, _cache, noteList, 30, 15);
+
             return note;
         }
 
@@ -53,80 +57,127 @@ namespace RepositoryLayer.Service
             await _context.Notes.AddAsync(note);
             await _context.SaveChangesAsync();
 
+            var noteList = _context.Notes.ToList();
+            RedisCacheHelper.SetToCache(cacheKey, _cache, noteList, 30, 15);
             return note;
         }
         
         public Note UpdateNote(int id, NoteML model)
         {
-            var note = _context.Notes.FirstOrDefault(n => n.Id == id);
+            var notes = RedisCacheHelper.GetFromCache<List<Note>>(cacheKey, _cache);
+            Note note;
 
+            if (notes != null)
+            {
+                note = notes.FirstOrDefault(n => n.Id == id);
+                if (note != null)
+                {
+                    // Update the note in the cached list
+                    note.Title = model.Title;
+                    note.Description = model.Description;
+                    note.IsArchived = model.IsArchived;
+                    note.IsTrashed = model.IsTrashed;
+
+                    // Update the note in the database
+                    _context.Notes.Update(note);
+                    _context.SaveChanges();
+
+                    // Update the note in the cache
+                    foreach (var note2 in notes)
+                    {
+                        if (note2.Id == id)
+                        {
+                            note2.Title = model.Title;
+                            note2.Description = model.Description;
+                            note2.IsArchived = model.IsArchived;
+                            note2.IsTrashed = model.IsTrashed;
+                        }
+                    }
+
+                    // Update the cache with the modified note list
+                    RedisCacheHelper.SetToCache(cacheKey, _cache, notes, 30, 15);
+
+                    return note;
+                }
+            }
+
+            // If the note was not found in the cache, get it from the database
+            note = _context.Notes.FirstOrDefault(n => n.Id == id);
             if (note == null)
             {
                 throw new NoteException("No note available");
             }
 
+            // Update the note properties
             note.Title = model.Title;
             note.Description = model.Description;
             note.IsArchived = model.IsArchived;
             note.IsTrashed = model.IsTrashed;
 
+            // Update the note in the database
             _context.Notes.Update(note);
             _context.SaveChanges();
 
-            _cache.Remove("GET_ALL_NOTES");
-            
+            var noteList = _context.Notes.ToList();
+
+            RedisCacheHelper.SetToCache(cacheKey, _cache, noteList, 30, 15);
+
             return note;
         }
 
         public Note GetNoteById(int id)
         {
-            var cacheKey = $"Note_{id}";
+            var notes = RedisCacheHelper.GetFromCache<List<Note>>(cacheKey, _cache);
+            Note note;
 
-            var note = RedisCacheHelper.GetFromCache<Note>(cacheKey, _cache);
-
-            if (note != null)
+            if (notes != null)
             {
-                return note;
+               note = notes.FirstOrDefault(n => n.Id == id);
+                if (note != null)
+                {
+                    return note;
+                }
             }
 
             note = _context.Notes.FirstOrDefault(n => n.Id == id);
-
+            notes = _context.Notes.ToList();
             if (note == null)
             {
                 throw new NoteException($"Note ID : {id} does not exists");
             }
             
-            RedisCacheHelper.SetToCache(cacheKey, _cache, note, 30, 15);
+
+            RedisCacheHelper.SetToCache(cacheKey, _cache, notes, 30, 15);
 
             return note;
         }
 
         public List<Note> GetNotes()
         {
-            var cacheKey = "GET_ALL_NOTES";
-
             var notes = RedisCacheHelper.GetFromCache<List<Note>>(cacheKey, _cache);
-
+            
             if (notes != null)
             {
-                return notes.ToList();
+                return notes.Where(n => n.IsTrashed == false && n.IsArchived == false).ToList();
             }
 
-            notes = _context.Notes.ToList();
+            notes = _context.Notes.Where(n => n.IsTrashed == false && n.IsArchived == false).ToList();
+            var noteList = _context.Notes.ToList();
 
             if (notes == null)
             {
                 throw new NoteException("No Note List Exists");
             }
 
-            RedisCacheHelper.SetToCache(cacheKey,_cache,notes);
+            RedisCacheHelper.SetToCache(cacheKey,_cache, noteList);
 
             return notes;
         }
 
         public Note DeleteNote(int id)
         {
-            var note = _context.Notes.FirstOrDefault(n => n.Id == id);
+            var noteList = _context.Notes.ToList();
+            var note = noteList.FirstOrDefault(n => n.Id == id);
 
             if (note == null)
             {
@@ -136,7 +187,7 @@ namespace RepositoryLayer.Service
             _context.Notes.Remove(note);
             _context.SaveChanges();
 
-            _cache.Remove("GET_ALL_NOTES");
+            RedisCacheHelper.SetToCache(cacheKey, _cache, noteList, 30, 15);
 
             return note;
         }
