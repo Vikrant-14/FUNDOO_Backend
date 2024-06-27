@@ -1,0 +1,415 @@
+2024-06-27 11:44:18.4467|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-27 11:44:18.5257|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting
+2024-06-27 11:44:18.5257|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-27 11:44:18.5437|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys\key-9cd553ec-17ce-4bcd-aa9d-a1f405ca802b.xml'.
+2024-06-27 11:44:18.5437|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys\key-f247c346-b336-404a-8b0a-a77cd2535a2c.xml'.
+2024-06-27 11:44:18.5437|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b}.
+2024-06-27 11:44:18.5437|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {f247c346-b336-404a-8b0a-a77cd2535a2c}.
+2024-06-27 11:44:18.5563|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with expiration date 2024-09-08 10:57:30Z as default key.
+2024-06-27 11:44:18.5563|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-06-27 11:44:18.5563|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI.
+2024-06-27 11:44:18.5563|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-06-27 11:44:18.5563|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2024-06-27 11:44:18.5563|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2024-06-27 11:44:18.5563|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} as the default key.
+2024-06-27 11:44:18.5563|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} was loaded during application startup.
+2024-06-27 11:44:18.6519|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5264
+2024-06-27 11:44:18.6519|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Fundoo
+2024-06-27 11:44:18.6519|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-27 11:44:18.6519|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-27 11:44:18.6519|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-27 11:44:18.6519|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-27 11:44:18.6519|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\
+2024-06-27 11:44:18.6519|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started
+2024-06-27 11:44:18.9787|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BJ" accepted.
+2024-06-27 11:44:18.9787|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BK" accepted.
+2024-06-27 11:44:18.9787|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BJ" started.
+2024-06-27 11:44:18.9787|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BK" started.
+2024-06-27 11:44:19.0023|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME1GI04BK" received FIN.
+2024-06-27 11:44:19.0023|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME1GI04BJ" received FIN.
+2024-06-27 11:44:19.0023|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME1GI04BK" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 11:44:19.0023|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BK" disconnecting.
+2024-06-27 11:44:19.0023|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME1GI04BJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 11:44:19.0023|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BJ" disconnecting.
+2024-06-27 11:44:19.0023|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BK" stopped.
+2024-06-27 11:44:19.0023|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BJ" stopped.
+2024-06-27 11:44:19.0614|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BL" accepted.
+2024-06-27 11:44:19.0614|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BM" accepted.
+2024-06-27 11:44:19.0614|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BL" started.
+2024-06-27 11:44:19.0614|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BM" started.
+2024-06-27 11:44:19.0974|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/swagger/index.html - -
+2024-06-27 11:44:19.1947|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed.
+2024-06-27 11:44:19.1947|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 11:44:19.2189|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html'
+2024-06-27 11:44:19.2189|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2024-06-27 11:44:19.3084|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection.
+2024-06-27 11:44:19.3084|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection.
+2024-06-27 11:44:19.3084|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BM" completed keep alive response.
+2024-06-27 11:44:19.3084|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/swagger/index.html - - - 200 - text/html;charset=utf-8 224.9899ms
+2024-06-27 11:44:19.3487|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/_framework/aspnetcore-browser-refresh.js - -
+2024-06-27 11:44:19.3487|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BM" completed keep alive response.
+2024-06-27 11:44:19.3487|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/_framework/aspnetcore-browser-refresh.js - - - 200 13748 application/javascript;+charset=utf-8 2.3320ms
+2024-06-27 11:44:19.4681|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/_vs/browserLink - -
+2024-06-27 11:44:19.5088|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BM" completed keep alive response.
+2024-06-27 11:44:19.5088|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 41.0087ms
+2024-06-27 11:44:19.6741|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/swagger/v1/swagger.json - -
+2024-06-27 11:44:19.6741|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 11:44:19.6741|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json'
+2024-06-27 11:44:19.6741|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2024-06-27 11:44:19.8071|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BM" completed keep alive response.
+2024-06-27 11:44:19.8071|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 133.1185ms
+2024-06-27 11:44:19.9216|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME1GI04BL" received FIN.
+2024-06-27 11:44:19.9216|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME1GI04BM" received FIN.
+2024-06-27 11:44:19.9216|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME1GI04BL" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 11:44:19.9216|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME1GI04BM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 11:44:19.9216|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BL" disconnecting.
+2024-06-27 11:44:19.9216|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BM" disconnecting.
+2024-06-27 11:44:19.9216|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BL" stopped.
+2024-06-27 11:44:19.9351|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BM" stopped.
+2024-06-27 11:44:36.1929|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BN" accepted.
+2024-06-27 11:44:36.1929|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BN" started.
+2024-06-27 11:44:36.1929|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5264/api/label/create-label application/json 29
+2024-06-27 11:44:36.1929|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 11:44:36.1980|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/label/create-label'
+2024-06-27 11:44:36.1980|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.LabelController.CreateLabel (Fundoo)' with route pattern 'api/label/create-label' is valid for the request path '/api/label/create-label'
+2024-06-27 11:44:36.1980|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.LabelController.CreateLabel (Fundoo)'
+2024-06-27 11:44:36.1980|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-06-27 11:44:36.1980|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request.
+2024-06-27 11:44:36.2471|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-06-27 11:44:36.2471|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-06-27 11:44:36.2471|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.LabelController.CreateLabel (Fundoo)'
+2024-06-27 11:44:36.3060|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateLabel", controller = "Label"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateLabel(ModelLayer.LabelML) on controller Fundoo.Controllers.LabelController (Fundoo).
+2024-06-27 11:44:36.3070|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-06-27 11:44:36.3070|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-06-27 11:44:36.3070|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-27 11:44:36.3070|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-06-27 11:44:36.3070|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-27 11:44:36.3070|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.LabelController (Fundoo)
+2024-06-27 11:44:36.4244|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-27 11:44:36.4502|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.LabelController (Fundoo)
+2024-06-27 11:44:36.4502|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'model' of type 'ModelLayer.LabelML' ...
+2024-06-27 11:44:36.4502|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'model' of type 'ModelLayer.LabelML' using the name '' in request data ...
+2024-06-27 11:44:36.4502|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-06-27 11:44:36.4502|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4ME1GI04BN", Request id "0HN4ME1GI04BN:00000002": started reading request body.
+2024-06-27 11:44:36.4502|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4ME1GI04BN", Request id "0HN4ME1GI04BN:00000002": done reading request body.
+2024-06-27 11:44:36.4502|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'ModelLayer.LabelML'
+2024-06-27 11:44:36.4627|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'model' of type 'ModelLayer.LabelML'.
+2024-06-27 11:44:36.4627|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'model' of type 'ModelLayer.LabelML'.
+2024-06-27 11:44:36.4627|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'model' of type 'ModelLayer.LabelML' ...
+2024-06-27 11:44:36.4627|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'model' of type 'ModelLayer.LabelML'.
+2024-06-27 11:44:36.4627|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 11:44:36.4627|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 11:44:36.4627|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 11:44:36.4627|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 11:44:36.4627|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.LabelController.CreateLabel (Fundoo) - Validation state: Valid
+2024-06-27 11:44:36.4627|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.LabelController.CreateLabel (Fundoo) with arguments (ModelLayer.LabelML)
+2024-06-27 11:44:36.4627|INFO|Fundoo.Controllers.LabelController|Label Created and trace by NLOGGER Vikrant
+2024-06-27 11:44:37.0194|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'NoteId'} was not created on entity type 'NoteLabelEntity' as the properties are already covered by the index {'NoteId', 'LabelId'}.
+2024-06-27 11:44:37.3650|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2024-06-27 11:44:37.4048|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"ApplicationDbContext"' generated a temporary value for the property '"Id"."Label"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 11:44:37.4806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 11:44:37.4806|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'ApplicationDbContext'.
+2024-06-27 11:44:37.4806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'ApplicationDbContext'.
+2024-06-27 11:44:37.4966|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'ApplicationDbContext'.
+2024-06-27 11:44:37.5300|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 11:44:37.8040|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 11:44:37.8040|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'.
+2024-06-27 11:44:37.8163|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'.
+2024-06-27 11:44:37.8896|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-06-27 11:44:37.8896|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (3ms).
+2024-06-27 11:44:37.9142|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Labels] ([LabelName])
+VALUES (@p0);
+SELECT [Id]
+FROM [Labels]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-27 11:44:37.9749|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (64ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Labels] ([LabelName])
+VALUES (@p0);
+SELECT [Id]
+FROM [Labels]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-27 11:44:37.9981|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The foreign key property 'Label.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-06-27 11:44:38.0136|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-06-27 11:44:38.0136|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction.
+2024-06-27 11:44:38.0136|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committed transaction.
+2024-06-27 11:44:38.0136|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 11:44:38.0308|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 11:44:38.0308|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction.
+2024-06-27 11:44:38.0420|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Label' tracked by 'ApplicationDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 11:44:38.0420|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2024-06-27 11:44:38.0420|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Fundoo.Controllers.LabelController.CreateLabel (Fundoo), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1568.5141ms.
+2024-06-27 11:44:38.0420|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 11:44:38.0420|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 11:44:38.0420|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 11:44:38.0420|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 11:44:38.0420|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 11:44:38.0420|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 11:44:38.0420|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-06-27 11:44:38.0420|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-06-27 11:44:38.0420|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2024-06-27 11:44:38.0420|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-27 11:44:38.0420|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-27 11:44:38.0420|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-06-27 11:44:38.0420|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ModelLayer.ResponseML'.
+2024-06-27 11:44:38.0420|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-06-27 11:44:38.0420|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 11:44:38.0420|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 11:44:38.0580|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.LabelController.CreateLabel (Fundoo) in 1747.0732ms
+2024-06-27 11:44:38.0580|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.LabelController.CreateLabel (Fundoo)'
+2024-06-27 11:44:52.3306|ERROR|Microsoft.AspNetCore.Session.SessionMiddleware|Error closing the session.|StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=HMGET, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 1, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: HP(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=12,Max=1000), WORKER: (Busy=0,Free=32767,Min=12,Max=32767), POOL: (Threads=12,QueuedItems=0,CompletedItems=144,Timers=7), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefreshAsync(String key, Boolean getData, CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.RefreshAsync(String key, CancellationToken token)
+   at Microsoft.AspNetCore.Session.DistributedSession.CommitAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+2024-06-27 11:44:52.3489|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BN" completed keep alive response.
+2024-06-27 11:44:52.3489|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.
+2024-06-27 11:44:52.3543|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5264/api/label/create-label application/json 29 - 201 - application/json;+charset=utf-8 16160.0256ms
+2024-06-27 11:44:59.9723|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME1GI04BN" received FIN.
+2024-06-27 11:44:59.9723|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BN" disconnecting.
+2024-06-27 11:44:59.9723|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME1GI04BN" stopped.
+2024-06-27 11:44:59.9723|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME1GI04BN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 11:45:40.3607|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-27 11:45:40.4417|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting
+2024-06-27 11:45:40.4579|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-27 11:45:40.4579|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys\key-9cd553ec-17ce-4bcd-aa9d-a1f405ca802b.xml'.
+2024-06-27 11:45:40.4634|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys\key-f247c346-b336-404a-8b0a-a77cd2535a2c.xml'.
+2024-06-27 11:45:40.4634|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b}.
+2024-06-27 11:45:40.4634|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {f247c346-b336-404a-8b0a-a77cd2535a2c}.
+2024-06-27 11:45:40.4634|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with expiration date 2024-09-08 10:57:30Z as default key.
+2024-06-27 11:45:40.4800|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-06-27 11:45:40.4800|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI.
+2024-06-27 11:45:40.4800|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-06-27 11:45:40.4800|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2024-06-27 11:45:40.4800|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2024-06-27 11:45:40.4800|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} as the default key.
+2024-06-27 11:45:40.4800|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} was loaded during application startup.
+2024-06-27 11:45:40.5584|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5264
+2024-06-27 11:45:40.5584|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Fundoo
+2024-06-27 11:45:40.5584|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-27 11:45:40.5584|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-27 11:45:40.5584|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-27 11:45:40.5584|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-27 11:45:40.5584|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\
+2024-06-27 11:45:40.5584|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started
+2024-06-27 11:45:40.8198|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRA8" accepted.
+2024-06-27 11:45:40.8198|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRA9" accepted.
+2024-06-27 11:45:40.8198|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRA8" started.
+2024-06-27 11:45:40.8198|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRA9" started.
+2024-06-27 11:45:40.8397|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME28UFRA9" received FIN.
+2024-06-27 11:45:40.8397|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME28UFRA8" received FIN.
+2024-06-27 11:45:40.8397|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME28UFRA9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 11:45:40.8397|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME28UFRA8" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 11:45:40.8397|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRA8" disconnecting.
+2024-06-27 11:45:40.8397|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRA9" disconnecting.
+2024-06-27 11:45:40.8397|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRA9" stopped.
+2024-06-27 11:45:40.8397|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRA8" stopped.
+2024-06-27 11:45:40.8722|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRAA" accepted.
+2024-06-27 11:45:40.8722|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRAB" accepted.
+2024-06-27 11:45:40.8722|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRAA" started.
+2024-06-27 11:45:40.8871|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRAB" started.
+2024-06-27 11:45:40.9418|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/swagger/index.html - -
+2024-06-27 11:45:41.0719|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed.
+2024-06-27 11:45:41.0719|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 11:45:41.1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html'
+2024-06-27 11:45:41.1001|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2024-06-27 11:45:41.1879|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection.
+2024-06-27 11:45:41.1988|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection.
+2024-06-27 11:45:41.1988|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRAB" completed keep alive response.
+2024-06-27 11:45:41.1988|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/swagger/index.html - - - 200 - text/html;charset=utf-8 261.0823ms
+2024-06-27 11:45:41.2227|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/_framework/aspnetcore-browser-refresh.js - -
+2024-06-27 11:45:41.2227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRAB" completed keep alive response.
+2024-06-27 11:45:41.2227|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/_framework/aspnetcore-browser-refresh.js - - - 200 13748 application/javascript;+charset=utf-8 1.7727ms
+2024-06-27 11:45:41.3594|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/_vs/browserLink - -
+2024-06-27 11:45:41.4013|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRAB" completed keep alive response.
+2024-06-27 11:45:41.4013|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.3538ms
+2024-06-27 11:45:41.5956|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/swagger/v1/swagger.json - -
+2024-06-27 11:45:41.5956|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 11:45:41.5956|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json'
+2024-06-27 11:45:41.5956|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2024-06-27 11:45:41.7305|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRAB" completed keep alive response.
+2024-06-27 11:45:41.7305|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 135.0991ms
+2024-06-27 11:45:49.3733|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5264/api/label/create-label application/json 27
+2024-06-27 11:45:49.3733|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 11:45:49.3733|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/label/create-label'
+2024-06-27 11:45:49.3733|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.LabelController.CreateLabel (Fundoo)' with route pattern 'api/label/create-label' is valid for the request path '/api/label/create-label'
+2024-06-27 11:45:49.3849|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.LabelController.CreateLabel (Fundoo)'
+2024-06-27 11:45:49.3849|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-06-27 11:45:49.3849|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request.
+2024-06-27 11:45:49.4220|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-06-27 11:45:49.4220|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-06-27 11:45:49.4220|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.LabelController.CreateLabel (Fundoo)'
+2024-06-27 11:45:49.4658|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateLabel", controller = "Label"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateLabel(ModelLayer.LabelML) on controller Fundoo.Controllers.LabelController (Fundoo).
+2024-06-27 11:45:49.4658|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-06-27 11:45:49.4658|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-06-27 11:45:49.4658|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-27 11:45:49.4658|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-06-27 11:45:49.4658|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-27 11:45:49.4658|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.LabelController (Fundoo)
+2024-06-27 11:45:49.5764|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-27 11:45:49.6079|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.LabelController (Fundoo)
+2024-06-27 11:45:49.6079|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'model' of type 'ModelLayer.LabelML' ...
+2024-06-27 11:45:49.6079|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'model' of type 'ModelLayer.LabelML' using the name '' in request data ...
+2024-06-27 11:45:49.6079|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-06-27 11:45:49.6194|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4ME28UFRAB", Request id "0HN4ME28UFRAB:00000006": started reading request body.
+2024-06-27 11:45:49.6194|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4ME28UFRAB", Request id "0HN4ME28UFRAB:00000006": done reading request body.
+2024-06-27 11:45:49.6194|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'ModelLayer.LabelML'
+2024-06-27 11:45:49.6194|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'model' of type 'ModelLayer.LabelML'.
+2024-06-27 11:45:49.6194|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'model' of type 'ModelLayer.LabelML'.
+2024-06-27 11:45:49.6194|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'model' of type 'ModelLayer.LabelML' ...
+2024-06-27 11:45:49.6194|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'model' of type 'ModelLayer.LabelML'.
+2024-06-27 11:45:49.6355|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 11:45:49.6355|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 11:45:49.6355|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 11:45:49.6355|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 11:45:49.6355|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.LabelController.CreateLabel (Fundoo) - Validation state: Valid
+2024-06-27 11:45:49.6355|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.LabelController.CreateLabel (Fundoo) with arguments (ModelLayer.LabelML)
+2024-06-27 11:45:49.6355|INFO|Fundoo.Controllers.LabelController|Label Created and trace by NLOGGER Vikrant
+2024-06-27 11:45:49.6613|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 11:45:49.6613|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 11:45:49.6613|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 11:45:49.6613|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 11:45:49.6664|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.LabelController.CreateLabel (Fundoo) in 195.6221ms
+2024-06-27 11:45:49.6664|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.LabelController.CreateLabel (Fundoo)'
+2024-06-27 11:45:50.0617|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME28UFRAA" received FIN.
+2024-06-27 11:45:50.0617|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME28UFRAA" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 11:45:50.0617|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRAA" disconnecting.
+2024-06-27 11:45:50.0617|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRAA" stopped.
+2024-06-27 11:46:04.0164|ERROR|Microsoft.AspNetCore.Session.SessionMiddleware|Error closing the session.|StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=HMGET, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 1, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: HP(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=12,Max=1000), WORKER: (Busy=0,Free=32767,Min=12,Max=32767), POOL: (Threads=15,QueuedItems=0,CompletedItems=141,Timers=5), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefreshAsync(String key, Boolean getData, CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.RefreshAsync(String key, CancellationToken token)
+   at Microsoft.AspNetCore.Session.DistributedSession.CommitAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+2024-06-27 11:46:04.1830|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME28UFRAB" completed keep alive response.
+2024-06-27 11:46:04.1830|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5264/api/label/create-label application/json 27 - 500 - application/json 14811.4252ms
+2024-06-27 11:46:07.3724|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-27 11:46:07.4519|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting
+2024-06-27 11:46:07.4684|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-27 11:46:07.4684|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys\key-9cd553ec-17ce-4bcd-aa9d-a1f405ca802b.xml'.
+2024-06-27 11:46:07.4684|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys\key-f247c346-b336-404a-8b0a-a77cd2535a2c.xml'.
+2024-06-27 11:46:07.4684|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b}.
+2024-06-27 11:46:07.4820|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {f247c346-b336-404a-8b0a-a77cd2535a2c}.
+2024-06-27 11:46:07.4820|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with expiration date 2024-09-08 10:57:30Z as default key.
+2024-06-27 11:46:07.4820|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-06-27 11:46:07.4964|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI.
+2024-06-27 11:46:07.4964|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-06-27 11:46:07.4964|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2024-06-27 11:46:07.4964|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2024-06-27 11:46:07.5101|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} as the default key.
+2024-06-27 11:46:07.5101|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} was loaded during application startup.
+2024-06-27 11:46:07.5828|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5264
+2024-06-27 11:46:07.5828|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Fundoo
+2024-06-27 11:46:07.5828|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-27 11:46:07.5828|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-27 11:46:07.5828|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-27 11:46:07.5828|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-27 11:46:07.5828|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\
+2024-06-27 11:46:07.5828|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started
+2024-06-27 11:46:07.8016|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HC" accepted.
+2024-06-27 11:46:07.8016|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HC" started.
+2024-06-27 11:46:07.8016|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HD" accepted.
+2024-06-27 11:46:07.8016|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HD" started.
+2024-06-27 11:46:07.8227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME2GVQ4HC" received FIN.
+2024-06-27 11:46:07.8227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME2GVQ4HD" received FIN.
+2024-06-27 11:46:07.8227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME2GVQ4HD" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 11:46:07.8227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME2GVQ4HC" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 11:46:07.8227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HD" disconnecting.
+2024-06-27 11:46:07.8227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HC" disconnecting.
+2024-06-27 11:46:07.8227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HC" stopped.
+2024-06-27 11:46:07.8227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HD" stopped.
+2024-06-27 11:46:07.8227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HE" accepted.
+2024-06-27 11:46:07.8227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HE" started.
+2024-06-27 11:46:07.8227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HF" accepted.
+2024-06-27 11:46:07.8227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HF" started.
+2024-06-27 11:46:07.8715|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/swagger/index.html - -
+2024-06-27 11:46:07.9613|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed.
+2024-06-27 11:46:07.9613|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 11:46:07.9886|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html'
+2024-06-27 11:46:07.9886|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2024-06-27 11:46:08.0829|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection.
+2024-06-27 11:46:08.0965|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection.
+2024-06-27 11:46:08.0965|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HE" completed keep alive response.
+2024-06-27 11:46:08.0965|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/swagger/index.html - - - 200 - text/html;charset=utf-8 228.0602ms
+2024-06-27 11:46:08.1258|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/_framework/aspnetcore-browser-refresh.js - -
+2024-06-27 11:46:08.1258|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HE" completed keep alive response.
+2024-06-27 11:46:08.1258|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/_framework/aspnetcore-browser-refresh.js - - - 200 13748 application/javascript;+charset=utf-8 2.4807ms
+2024-06-27 11:46:08.1586|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/_vs/browserLink - -
+2024-06-27 11:46:08.2018|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HE" completed keep alive response.
+2024-06-27 11:46:08.2018|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 43.4093ms
+2024-06-27 11:46:08.2878|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/swagger/v1/swagger.json - -
+2024-06-27 11:46:08.2878|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 11:46:08.2878|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json'
+2024-06-27 11:46:08.2878|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2024-06-27 11:46:08.4178|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HE" completed keep alive response.
+2024-06-27 11:46:08.4178|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 130.4872ms
+2024-06-27 11:46:10.1027|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME2GVQ4HE" received FIN.
+2024-06-27 11:46:10.1045|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME2GVQ4HF" received FIN.
+2024-06-27 11:46:10.1045|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HE" disconnecting.
+2024-06-27 11:46:10.1045|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HE" stopped.
+2024-06-27 11:46:10.1045|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME2GVQ4HE" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 11:46:10.1045|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HF" disconnecting.
+2024-06-27 11:46:10.1045|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HF" stopped.
+2024-06-27 11:46:10.1045|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME2GVQ4HF" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 11:46:43.4487|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HG" accepted.
+2024-06-27 11:46:43.4487|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HG" started.
+2024-06-27 11:46:43.4487|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5264/api/label/create-label application/json 27
+2024-06-27 11:46:43.4487|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 11:46:43.4487|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/label/create-label'
+2024-06-27 11:46:43.4646|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.LabelController.CreateLabel (Fundoo)' with route pattern 'api/label/create-label' is valid for the request path '/api/label/create-label'
+2024-06-27 11:46:43.4646|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.LabelController.CreateLabel (Fundoo)'
+2024-06-27 11:46:43.4646|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-06-27 11:46:43.4646|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request.
+2024-06-27 11:46:43.4993|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-06-27 11:46:43.4993|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-06-27 11:46:43.4993|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.LabelController.CreateLabel (Fundoo)'
+2024-06-27 11:46:43.5468|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateLabel", controller = "Label"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateLabel(ModelLayer.LabelML) on controller Fundoo.Controllers.LabelController (Fundoo).
+2024-06-27 11:46:43.5468|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-06-27 11:46:43.5468|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-06-27 11:46:43.5468|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-27 11:46:43.5468|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-06-27 11:46:43.5468|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-27 11:46:43.5468|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.LabelController (Fundoo)
+2024-06-27 11:46:43.6895|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-27 11:46:43.7195|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.LabelController (Fundoo)
+2024-06-27 11:46:43.7195|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'model' of type 'ModelLayer.LabelML' ...
+2024-06-27 11:46:43.7195|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'model' of type 'ModelLayer.LabelML' using the name '' in request data ...
+2024-06-27 11:46:43.7195|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-06-27 11:46:43.7290|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4ME2GVQ4HG", Request id "0HN4ME2GVQ4HG:00000002": started reading request body.
+2024-06-27 11:46:43.7290|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4ME2GVQ4HG", Request id "0HN4ME2GVQ4HG:00000002": done reading request body.
+2024-06-27 11:46:43.7290|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'ModelLayer.LabelML'
+2024-06-27 11:46:43.7290|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'model' of type 'ModelLayer.LabelML'.
+2024-06-27 11:46:43.7290|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'model' of type 'ModelLayer.LabelML'.
+2024-06-27 11:46:43.7290|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'model' of type 'ModelLayer.LabelML' ...
+2024-06-27 11:46:43.7290|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'model' of type 'ModelLayer.LabelML'.
+2024-06-27 11:46:43.7290|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 11:46:43.7290|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 11:46:43.7290|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 11:46:43.7290|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 11:46:43.7457|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.LabelController.CreateLabel (Fundoo) - Validation state: Valid
+2024-06-27 11:46:43.7457|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.LabelController.CreateLabel (Fundoo) with arguments (ModelLayer.LabelML)
+2024-06-27 11:46:43.7457|INFO|Fundoo.Controllers.LabelController|Label Created and trace by NLOGGER
+2024-06-27 11:46:43.7457|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 11:46:43.7457|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 11:46:43.7457|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 11:46:43.7457|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 11:46:43.7457|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.LabelController.CreateLabel (Fundoo) in 199.5967ms
+2024-06-27 11:46:43.7457|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.LabelController.CreateLabel (Fundoo)'
+2024-06-27 11:46:58.0924|ERROR|Microsoft.AspNetCore.Session.SessionMiddleware|Error closing the session.|StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=HMGET, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 1, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: HP(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=12,Max=1000), WORKER: (Busy=0,Free=32767,Min=12,Max=32767), POOL: (Threads=14,QueuedItems=0,CompletedItems=130,Timers=7), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefreshAsync(String key, Boolean getData, CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.RefreshAsync(String key, CancellationToken token)
+   at Microsoft.AspNetCore.Session.DistributedSession.CommitAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+2024-06-27 11:46:58.2173|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HG" completed keep alive response.
+2024-06-27 11:46:58.2173|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5264/api/label/create-label application/json 27 - 500 - application/json 14768.2336ms
+2024-06-27 11:47:00.1716|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME2GVQ4HG" received FIN.
+2024-06-27 11:47:00.1716|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME2GVQ4HG" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 11:47:00.1716|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HG" disconnecting.
+2024-06-27 11:47:00.1716|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HG" stopped.

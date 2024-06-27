@@ -87,3 +87,8 @@ C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\Microsoft.Extensions.
 C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
 C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\nlog.config
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\NLog.dll
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\NLog.Database.dll
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\NLog.Web.AspNetCore.dll

@@ -13,10 +13,13 @@ namespace Fundoo.Controllers
         private readonly ILabelBL labelBL;
         private readonly ResponseML responseML;
 
-        public LabelController(ILabelBL labelBL)
+        private readonly ILogger<LabelController> _logger;   
+
+        public LabelController(ILabelBL labelBL, ILogger<LabelController> logger)
         {
             this.labelBL = labelBL; 
             responseML = new ResponseML();
+            _logger = logger;
         }
 
         [HttpPost("create-label")]
@@ -24,6 +27,9 @@ namespace Fundoo.Controllers
         {
             try
             {
+                _logger.LogInformation("Label Created and trace by NLOGGER");
+
+               throw new Exception("Exception has occured (Logger)");
                 var result = labelBL.CreateLabel(model);
 
                 responseML.Success = true;

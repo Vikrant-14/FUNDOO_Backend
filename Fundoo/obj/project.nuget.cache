@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "b4OaA7Lq+5ZrCljIUn5iOzwQl7aOLuH5U5co93sj0WTEkeyzb25U4JwWewa1j3Iir6xhNekLnC4SMeoTGS/wwA==",
+  "dgSpecHash": "7HysoaevuAjX7V0P902bonESf3ODileQ6tUuiut4EwQJo8cgJizmIFQ/Eg1fqNGs35xZdKA3o87uOPQRU7s3rg==",
   "success": true,
   "projectFilePath": "C:\\Users\\kirti\\Vikrant\\CDAC\\FUNDOO\\Fundoo\\Fundoo.csproj",
   "expectedPackageFiles": [
@@ -43,6 +43,10 @@
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\mimekit\\4.6.0\\mimekit.4.6.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\nlog\\5.3.2\\nlog.5.3.2.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\nlog.database\\5.3.2\\nlog.database.5.3.2.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\nlog.extensions.logging\\5.3.11\\nlog.extensions.logging.5.3.11.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\nlog.web.aspnetcore\\5.3.11\\nlog.web.aspnetcore.5.3.11.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\stackexchange.redis\\2.7.27\\stackexchange.redis.2.7.27.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
