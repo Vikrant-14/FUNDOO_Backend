@@ -27,15 +27,15 @@ namespace Fundoo.Controllers
         {
             try
             {
-                _logger.LogInformation("Label Created and trace by NLOGGER");
 
-               throw new Exception("Exception has occured (Logger)");
+  
                 var result = labelBL.CreateLabel(model);
 
                 responseML.Success = true;
                 responseML.Message = "Label added successfully";
                 responseML.Data = result;
 
+                _logger.LogInformation("Label Created and trace by NLOGGER");
                 return StatusCode(201, responseML);
             }
             catch(LabelException ex)

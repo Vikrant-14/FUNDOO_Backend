@@ -92,3 +92,5 @@ C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\NLog.dll
 C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\NLog.Database.dll
 C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\NLog.Extensions.Logging.dll
 C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\bin\Debug\net6.0\System.Threading.Channels.dll

@@ -413,3 +413,833 @@ WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
 2024-06-27 11:47:00.1716|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4ME2GVQ4HG" sending FIN because: "The Socket transport's send loop completed gracefully."
 2024-06-27 11:47:00.1716|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HG" disconnecting.
 2024-06-27 11:47:00.1716|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4ME2GVQ4HG" stopped.
+2024-06-27 15:00:53.0261|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-27 15:00:53.0903|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting
+2024-06-27 15:00:53.0903|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-27 15:00:53.0903|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys\key-9cd553ec-17ce-4bcd-aa9d-a1f405ca802b.xml'.
+2024-06-27 15:00:53.1124|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys\key-f247c346-b336-404a-8b0a-a77cd2535a2c.xml'.
+2024-06-27 15:00:53.1219|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b}.
+2024-06-27 15:00:53.1219|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {f247c346-b336-404a-8b0a-a77cd2535a2c}.
+2024-06-27 15:00:53.1219|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with expiration date 2024-09-08 10:57:30Z as default key.
+2024-06-27 15:00:53.1219|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-06-27 15:00:53.1219|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI.
+2024-06-27 15:00:53.1219|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-06-27 15:00:53.1219|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2024-06-27 15:00:53.1361|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2024-06-27 15:00:53.1361|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} as the default key.
+2024-06-27 15:00:53.1361|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} was loaded during application startup.
+2024-06-27 15:00:53.1773|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5264
+2024-06-27 15:00:53.1773|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Fundoo
+2024-06-27 15:00:53.1773|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-27 15:00:53.1773|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-27 15:00:53.1773|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-27 15:00:53.1773|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-27 15:00:53.1773|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\
+2024-06-27 15:00:53.1773|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started
+2024-06-27 15:00:53.5776|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2513" accepted.
+2024-06-27 15:00:53.5776|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2512" accepted.
+2024-06-27 15:00:53.5776|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2512" started.
+2024-06-27 15:00:53.5776|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2513" started.
+2024-06-27 15:00:53.5919|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHFBK2512" received FIN.
+2024-06-27 15:00:53.5919|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHFBK2513" received FIN.
+2024-06-27 15:00:53.5919|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHFBK2513" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:00:53.5919|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHFBK2512" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:00:53.5919|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2512" disconnecting.
+2024-06-27 15:00:53.5919|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2513" disconnecting.
+2024-06-27 15:00:53.5919|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2512" stopped.
+2024-06-27 15:00:53.5919|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2513" stopped.
+2024-06-27 15:00:54.2796|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2514" accepted.
+2024-06-27 15:00:54.2796|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2514" started.
+2024-06-27 15:00:54.2796|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2515" accepted.
+2024-06-27 15:00:54.2796|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2515" started.
+2024-06-27 15:00:54.3781|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/swagger/index.html - -
+2024-06-27 15:00:54.5223|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed.
+2024-06-27 15:00:54.5223|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 15:00:54.5429|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html'
+2024-06-27 15:00:54.5429|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2024-06-27 15:00:54.6069|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection.
+2024-06-27 15:00:54.6069|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection.
+2024-06-27 15:00:54.6069|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2514" completed keep alive response.
+2024-06-27 15:00:54.6069|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/swagger/index.html - - - 200 - text/html;charset=utf-8 242.8380ms
+2024-06-27 15:00:54.6518|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/_framework/aspnetcore-browser-refresh.js - -
+2024-06-27 15:00:54.6555|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2514" completed keep alive response.
+2024-06-27 15:00:54.6555|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/_framework/aspnetcore-browser-refresh.js - - - 200 13748 application/javascript;+charset=utf-8 3.8668ms
+2024-06-27 15:00:54.7578|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/_vs/browserLink - -
+2024-06-27 15:00:54.9061|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2514" completed keep alive response.
+2024-06-27 15:00:54.9061|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 148.4463ms
+2024-06-27 15:00:54.9636|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/swagger/v1/swagger.json - -
+2024-06-27 15:00:54.9636|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 15:00:54.9646|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json'
+2024-06-27 15:00:54.9646|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2024-06-27 15:00:55.0539|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2514" completed keep alive response.
+2024-06-27 15:00:55.0539|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 90.4165ms
+2024-06-27 15:00:57.4451|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHFBK2515" received FIN.
+2024-06-27 15:00:57.4451|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2515" disconnecting.
+2024-06-27 15:00:57.4451|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2515" stopped.
+2024-06-27 15:00:57.4451|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHFBK2514" received FIN.
+2024-06-27 15:00:57.4451|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHFBK2515" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:00:57.4489|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2514" disconnecting.
+2024-06-27 15:00:57.4489|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2514" stopped.
+2024-06-27 15:00:57.4489|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHFBK2514" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:01:20.4085|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2516" accepted.
+2024-06-27 15:01:20.4085|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2516" started.
+2024-06-27 15:01:20.4085|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5264/api/note/createnote application/json 102
+2024-06-27 15:01:20.4085|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 15:01:20.4085|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/note/createnote'
+2024-06-27 15:01:20.4085|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)' with route pattern 'api/note/createnote' is valid for the request path '/api/note/createnote'
+2024-06-27 15:01:20.4085|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:01:20.4261|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-06-27 15:01:20.4261|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request.
+2024-06-27 15:01:20.4544|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-06-27 15:01:20.4544|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-06-27 15:01:20.4644|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:01:20.4937|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateNote", controller = "Note"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateNote(ModelLayer.NoteML) on controller Fundoo.Controllers.NoteController (Fundoo).
+2024-06-27 15:01:20.4937|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-06-27 15:01:20.4937|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-06-27 15:01:20.4937|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-27 15:01:20.4937|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-06-27 15:01:20.4937|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-27 15:01:20.4937|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-06-27 15:01:20.5917|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-27 15:01:20.6095|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-06-27 15:01:20.6095|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML' ...
+2024-06-27 15:01:20.6095|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML' using the name '' in request data ...
+2024-06-27 15:01:20.6095|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-06-27 15:01:20.6095|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4MHFBK2516", Request id "0HN4MHFBK2516:00000002": started reading request body.
+2024-06-27 15:01:20.6095|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4MHFBK2516", Request id "0HN4MHFBK2516:00000002": done reading request body.
+2024-06-27 15:01:20.6210|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'ModelLayer.NoteML'
+2024-06-27 15:01:20.6210|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:01:20.6210|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:01:20.6210|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'noteML' of type 'ModelLayer.NoteML' ...
+2024-06-27 15:01:20.6210|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:01:20.6210|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:01:20.6210|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:01:20.6210|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:01:20.6210|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:01:20.6210|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.CreateNote (Fundoo) - Validation state: Valid
+2024-06-27 15:01:20.6210|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.CreateNote (Fundoo) with arguments (ModelLayer.NoteML)
+2024-06-27 15:01:20.9718|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'NoteId'} was not created on entity type 'NoteLabelEntity' as the properties are already covered by the index {'NoteId', 'LabelId'}.
+2024-06-27 15:01:21.1791|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2024-06-27 15:01:21.1987|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"ApplicationDbContext"' generated a temporary value for the property '"Id"."Note"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:21.2426|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:21.2426|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'ApplicationDbContext'.
+2024-06-27 15:01:21.2467|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'ApplicationDbContext'.
+2024-06-27 15:01:21.2467|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'ApplicationDbContext'.
+2024-06-27 15:01:21.2874|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:22.4612|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:22.4612|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'.
+2024-06-27 15:01:22.4710|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'.
+2024-06-27 15:01:22.5059|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-06-27 15:01:22.5059|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (2ms).
+2024-06-27 15:01:22.5295|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Notes] ([Description], [IsArchived], [IsTrashed], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Notes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-27 15:01:22.6106|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (88ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Notes] ([Description], [IsArchived], [IsTrashed], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Notes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-27 15:01:22.6294|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The foreign key property 'Note.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-06-27 15:01:22.6390|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-06-27 15:01:22.6390|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction.
+2024-06-27 15:01:22.6390|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committed transaction.
+2024-06-27 15:01:22.6390|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:22.6390|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:22.6390|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction.
+2024-06-27 15:01:22.6562|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Note' tracked by 'ApplicationDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:22.6562|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2024-06-27 15:01:22.6989|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Note>()'
+2024-06-27 15:01:22.8039|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Note>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Note.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Note.Description (string) Required, 1], [Property: Note.IsArchived (bool) Required, 2], [Property: Note.IsTrashed (bool) Required, 3], [Property: Note.Title (string) Required, 4] }
+        SELECT n.Id, n.Description, n.IsArchived, n.IsTrashed, n.Title
+        FROM Notes AS n), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Note>, 
+    RepositoryLayer.Context.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)'
+2024-06-27 15:01:22.8260|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-06-27 15:01:22.8260|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2024-06-27 15:01:22.8260|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:22.8260|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:22.8260|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Id], [n].[Description], [n].[IsArchived], [n].[IsTrashed], [n].[Title]
+FROM [Notes] AS [n]
+2024-06-27 15:01:22.8260|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Id], [n].[Description], [n].[IsArchived], [n].[IsTrashed], [n].[Title]
+FROM [Notes] AS [n]
+2024-06-27 15:01:22.8260|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:22.8260|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:22.8260|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:22.8260|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:22.8260|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:22.8260|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-06-27 15:01:22.8260|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:22.8260|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:36.2135|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:01:36.2135|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:01:36.2135|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:01:36.2135|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:01:36.2171|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.NoteController.CreateNote (Fundoo) in 15719.7755ms
+2024-06-27 15:01:36.2171|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:01:38.8457|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2516" completed keep alive response.
+2024-06-27 15:01:38.8457|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.
+2024-06-27 15:01:38.8457|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5264/api/note/createnote application/json 102 - 500 - application/json 18439.0988ms
+2024-06-27 15:01:42.4577|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHFBK2516" received FIN.
+2024-06-27 15:01:42.4577|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2516" disconnecting.
+2024-06-27 15:01:42.4577|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHFBK2516" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:01:42.4577|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2516" stopped.
+2024-06-27 15:01:44.1253|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2517" accepted.
+2024-06-27 15:01:44.1253|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2517" started.
+2024-06-27 15:01:44.1253|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5264/api/note/createnote application/json 102
+2024-06-27 15:01:44.1253|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 15:01:44.1253|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/note/createnote'
+2024-06-27 15:01:44.1253|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)' with route pattern 'api/note/createnote' is valid for the request path '/api/note/createnote'
+2024-06-27 15:01:44.1253|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:01:44.1253|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-06-27 15:01:44.1253|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request.
+2024-06-27 15:01:44.1253|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-06-27 15:01:44.1253|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-06-27 15:01:44.1253|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:01:44.1253|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateNote", controller = "Note"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateNote(ModelLayer.NoteML) on controller Fundoo.Controllers.NoteController (Fundoo).
+2024-06-27 15:01:44.1253|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-06-27 15:01:44.1253|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-06-27 15:01:44.1253|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-27 15:01:44.1253|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-06-27 15:01:44.1253|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-27 15:01:44.1253|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-06-27 15:01:44.1467|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-06-27 15:01:44.1467|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML' ...
+2024-06-27 15:01:44.1467|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML' using the name '' in request data ...
+2024-06-27 15:01:44.1467|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-06-27 15:01:44.1467|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4MHFBK2517", Request id "0HN4MHFBK2517:00000002": started reading request body.
+2024-06-27 15:01:44.1467|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4MHFBK2517", Request id "0HN4MHFBK2517:00000002": done reading request body.
+2024-06-27 15:01:44.1467|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'ModelLayer.NoteML'
+2024-06-27 15:01:44.1467|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:01:44.1467|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:01:44.1467|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'noteML' of type 'ModelLayer.NoteML' ...
+2024-06-27 15:01:44.1467|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:01:44.1467|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:01:44.1467|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:01:44.1467|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:01:44.1467|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:01:44.1467|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.CreateNote (Fundoo) - Validation state: Valid
+2024-06-27 15:01:44.1467|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.CreateNote (Fundoo) with arguments (ModelLayer.NoteML)
+2024-06-27 15:01:44.1758|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"ApplicationDbContext"' generated a temporary value for the property '"Id"."Note"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'ApplicationDbContext'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'ApplicationDbContext'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'ApplicationDbContext'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Notes] ([Description], [IsArchived], [IsTrashed], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Notes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-27 15:01:44.1758|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Notes] ([Description], [IsArchived], [IsTrashed], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Notes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The foreign key property 'Note.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committed transaction.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Note' tracked by 'ApplicationDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Id], [n].[Description], [n].[IsArchived], [n].[IsTrashed], [n].[Title]
+FROM [Notes] AS [n]
+2024-06-27 15:01:44.1758|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Id], [n].[Description], [n].[IsArchived], [n].[IsTrashed], [n].[Title]
+FROM [Notes] AS [n]
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:44.1758|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:01:44.3143|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Fundoo.Controllers.NoteController.CreateNote (Fundoo), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 163.7277ms.
+2024-06-27 15:01:44.3143|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:01:44.3143|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:01:44.3143|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:01:44.3143|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:01:44.3143|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:01:44.3143|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:01:44.3143|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-06-27 15:01:44.3143|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-06-27 15:01:44.3143|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2024-06-27 15:01:44.3143|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-27 15:01:44.3143|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-27 15:01:44.3143|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-06-27 15:01:44.3143|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ModelLayer.ResponseML'.
+2024-06-27 15:01:44.3143|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-06-27 15:01:44.3143|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:01:44.3143|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:01:44.3143|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.NoteController.CreateNote (Fundoo) in 190.4545ms
+2024-06-27 15:01:44.3143|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:01:44.3143|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2517" completed keep alive response.
+2024-06-27 15:01:44.3143|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.
+2024-06-27 15:01:44.3143|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5264/api/note/createnote application/json 102 - 201 - application/json;+charset=utf-8 196.2710ms
+2024-06-27 15:01:52.4594|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHFBK2517" received FIN.
+2024-06-27 15:01:52.4594|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2517" disconnecting.
+2024-06-27 15:01:52.4594|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHFBK2517" stopped.
+2024-06-27 15:01:52.4594|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHFBK2517" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:03:38.6576|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-27 15:03:38.7174|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting
+2024-06-27 15:03:38.7174|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-27 15:03:38.7319|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys\key-9cd553ec-17ce-4bcd-aa9d-a1f405ca802b.xml'.
+2024-06-27 15:03:38.7319|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys\key-f247c346-b336-404a-8b0a-a77cd2535a2c.xml'.
+2024-06-27 15:03:38.7319|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b}.
+2024-06-27 15:03:38.7319|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {f247c346-b336-404a-8b0a-a77cd2535a2c}.
+2024-06-27 15:03:38.7319|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with expiration date 2024-09-08 10:57:30Z as default key.
+2024-06-27 15:03:38.7319|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-06-27 15:03:38.7319|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI.
+2024-06-27 15:03:38.7319|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-06-27 15:03:38.7477|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2024-06-27 15:03:38.7477|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2024-06-27 15:03:38.7477|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} as the default key.
+2024-06-27 15:03:38.7477|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} was loaded during application startup.
+2024-06-27 15:03:38.7946|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5264
+2024-06-27 15:03:38.7946|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Fundoo
+2024-06-27 15:03:38.7946|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-27 15:03:38.7946|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-27 15:03:38.7946|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-27 15:03:38.7946|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-27 15:03:38.7946|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\
+2024-06-27 15:03:38.7946|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started
+2024-06-27 15:03:39.2201|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72P" accepted.
+2024-06-27 15:03:39.2201|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72Q" accepted.
+2024-06-27 15:03:39.2201|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72P" started.
+2024-06-27 15:03:39.2201|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72Q" started.
+2024-06-27 15:03:39.2375|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHGSVO72P" received FIN.
+2024-06-27 15:03:39.2375|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHGSVO72Q" received FIN.
+2024-06-27 15:03:39.2375|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHGSVO72Q" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:03:39.2375|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHGSVO72P" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:03:39.2375|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72P" disconnecting.
+2024-06-27 15:03:39.2375|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72Q" disconnecting.
+2024-06-27 15:03:39.2375|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72P" stopped.
+2024-06-27 15:03:39.2375|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72Q" stopped.
+2024-06-27 15:03:39.2865|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72R" accepted.
+2024-06-27 15:03:39.2865|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72R" started.
+2024-06-27 15:03:39.2865|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72S" accepted.
+2024-06-27 15:03:39.2865|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72S" started.
+2024-06-27 15:03:39.3264|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/swagger/index.html - -
+2024-06-27 15:03:39.4668|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed.
+2024-06-27 15:03:39.4668|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 15:03:39.4898|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html'
+2024-06-27 15:03:39.4898|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2024-06-27 15:03:39.5708|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection.
+2024-06-27 15:03:39.5814|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection.
+2024-06-27 15:03:39.5814|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72R" completed keep alive response.
+2024-06-27 15:03:39.5814|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/swagger/index.html - - - 200 - text/html;charset=utf-8 265.2499ms
+2024-06-27 15:03:39.7034|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/_framework/aspnetcore-browser-refresh.js - -
+2024-06-27 15:03:39.7034|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72R" completed keep alive response.
+2024-06-27 15:03:39.7034|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/_framework/aspnetcore-browser-refresh.js - - - 200 13748 application/javascript;+charset=utf-8 1.8878ms
+2024-06-27 15:03:39.7034|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/_vs/browserLink - -
+2024-06-27 15:03:39.7342|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72S" completed keep alive response.
+2024-06-27 15:03:39.7342|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 28.5388ms
+2024-06-27 15:03:39.8938|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/swagger/v1/swagger.json - -
+2024-06-27 15:03:39.8938|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 15:03:39.8938|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json'
+2024-06-27 15:03:39.8938|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2024-06-27 15:03:39.9841|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72S" completed keep alive response.
+2024-06-27 15:03:39.9841|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 90.4658ms
+2024-06-27 15:03:42.6310|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHGSVO72R" received FIN.
+2024-06-27 15:03:42.6310|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHGSVO72S" received FIN.
+2024-06-27 15:03:42.6310|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72S" disconnecting.
+2024-06-27 15:03:42.6310|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72S" stopped.
+2024-06-27 15:03:42.6310|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72R" disconnecting.
+2024-06-27 15:03:42.6310|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72R" stopped.
+2024-06-27 15:03:42.6310|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHGSVO72R" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:03:42.6446|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHGSVO72S" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:03:52.0870|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72T" accepted.
+2024-06-27 15:03:52.0870|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72T" started.
+2024-06-27 15:03:52.0870|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5264/api/note/createnote application/json 95
+2024-06-27 15:03:52.0870|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 15:03:52.0907|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/note/createnote'
+2024-06-27 15:03:52.0907|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)' with route pattern 'api/note/createnote' is valid for the request path '/api/note/createnote'
+2024-06-27 15:03:52.0907|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:03:52.0907|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-06-27 15:03:52.0907|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request.
+2024-06-27 15:03:52.1227|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-06-27 15:03:52.1227|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-06-27 15:03:52.1227|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:03:52.1615|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateNote", controller = "Note"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateNote(ModelLayer.NoteML) on controller Fundoo.Controllers.NoteController (Fundoo).
+2024-06-27 15:03:52.1615|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-06-27 15:03:52.1615|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-06-27 15:03:52.1615|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-27 15:03:52.1615|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-06-27 15:03:52.1615|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-27 15:03:52.1615|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-06-27 15:03:52.2738|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-27 15:03:52.2977|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-06-27 15:03:52.2977|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML' ...
+2024-06-27 15:03:52.2977|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML' using the name '' in request data ...
+2024-06-27 15:03:52.2977|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-06-27 15:03:52.2977|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4MHGSVO72T", Request id "0HN4MHGSVO72T:00000002": started reading request body.
+2024-06-27 15:03:52.2977|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4MHGSVO72T", Request id "0HN4MHGSVO72T:00000002": done reading request body.
+2024-06-27 15:03:52.3101|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'ModelLayer.NoteML'
+2024-06-27 15:03:52.3101|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:03:52.3101|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:03:52.3101|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'noteML' of type 'ModelLayer.NoteML' ...
+2024-06-27 15:03:52.3101|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:03:52.3101|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:03:52.3101|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:03:52.3101|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:03:52.3101|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:03:52.3101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.CreateNote (Fundoo) - Validation state: Valid
+2024-06-27 15:03:52.3101|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.CreateNote (Fundoo) with arguments (ModelLayer.NoteML)
+2024-06-27 15:03:52.6392|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'NoteId'} was not created on entity type 'NoteLabelEntity' as the properties are already covered by the index {'NoteId', 'LabelId'}.
+2024-06-27 15:03:52.8860|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2024-06-27 15:03:52.9126|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"ApplicationDbContext"' generated a temporary value for the property '"Id"."Note"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:03:52.9650|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:03:52.9650|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'ApplicationDbContext'.
+2024-06-27 15:03:52.9650|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'ApplicationDbContext'.
+2024-06-27 15:03:52.9650|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'ApplicationDbContext'.
+2024-06-27 15:03:53.0136|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:03:53.2419|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:03:53.2419|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'.
+2024-06-27 15:03:53.2498|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'.
+2024-06-27 15:03:53.2900|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-06-27 15:03:53.2937|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (1ms).
+2024-06-27 15:03:53.2937|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Notes] ([Description], [IsArchived], [IsTrashed], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Notes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-27 15:03:53.3333|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (31ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Notes] ([Description], [IsArchived], [IsTrashed], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Notes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-27 15:03:53.3468|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The foreign key property 'Note.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-06-27 15:03:53.3468|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-06-27 15:03:53.3564|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction.
+2024-06-27 15:03:53.3564|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committed transaction.
+2024-06-27 15:03:53.3564|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:03:53.3564|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:03:53.3564|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction.
+2024-06-27 15:03:53.3564|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Note' tracked by 'ApplicationDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:03:53.3564|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2024-06-27 15:03:53.3956|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Note>()'
+2024-06-27 15:03:53.5205|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Note>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Note.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Note.Description (string) Required, 1], [Property: Note.IsArchived (bool) Required, 2], [Property: Note.IsTrashed (bool) Required, 3], [Property: Note.Title (string) Required, 4] }
+        SELECT n.Id, n.Description, n.IsArchived, n.IsTrashed, n.Title
+        FROM Notes AS n), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Note>, 
+    RepositoryLayer.Context.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)'
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Id], [n].[Description], [n].[IsArchived], [n].[IsTrashed], [n].[Title]
+FROM [Notes] AS [n]
+2024-06-27 15:03:53.5426|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Id], [n].[Description], [n].[IsArchived], [n].[IsTrashed], [n].[Title]
+FROM [Notes] AS [n]
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:03:53.5426|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:03:53.8188|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Fundoo.Controllers.NoteController.CreateNote (Fundoo), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1495.5113ms.
+2024-06-27 15:03:53.8188|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:03:53.8188|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:03:53.8188|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:03:53.8188|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:03:53.8188|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:03:53.8188|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:03:53.8188|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-06-27 15:03:53.8188|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-06-27 15:03:53.8188|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2024-06-27 15:03:53.8188|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-27 15:03:53.8188|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-27 15:03:53.8188|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-06-27 15:03:53.8188|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ModelLayer.ResponseML'.
+2024-06-27 15:03:53.8241|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-06-27 15:03:53.8241|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:03:53.8241|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:03:53.8241|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.NoteController.CreateNote (Fundoo) in 1661.9071ms
+2024-06-27 15:03:53.8241|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:03:53.8241|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72T" completed keep alive response.
+2024-06-27 15:03:53.8241|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.
+2024-06-27 15:03:53.8241|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5264/api/note/createnote application/json 95 - 201 - application/json;+charset=utf-8 1749.4477ms
+2024-06-27 15:04:02.6700|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHGSVO72T" received FIN.
+2024-06-27 15:04:02.6700|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHGSVO72T" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:04:02.6700|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72T" disconnecting.
+2024-06-27 15:04:02.6851|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHGSVO72T" stopped.
+2024-06-27 15:07:03.4486|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-27 15:07:03.5016|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting
+2024-06-27 15:07:03.5147|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-27 15:07:03.5147|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys\key-9cd553ec-17ce-4bcd-aa9d-a1f405ca802b.xml'.
+2024-06-27 15:07:03.5147|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\kirti\AppData\Local\ASP.NET\DataProtection-Keys\key-f247c346-b336-404a-8b0a-a77cd2535a2c.xml'.
+2024-06-27 15:07:03.5147|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b}.
+2024-06-27 15:07:03.5147|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {f247c346-b336-404a-8b0a-a77cd2535a2c}.
+2024-06-27 15:07:03.5312|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with expiration date 2024-09-08 10:57:30Z as default key.
+2024-06-27 15:07:03.5312|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-06-27 15:07:03.5312|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI.
+2024-06-27 15:07:03.5312|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-06-27 15:07:03.5312|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2024-06-27 15:07:03.5312|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2024-06-27 15:07:03.5312|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} as the default key.
+2024-06-27 15:07:03.5312|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} was loaded during application startup.
+2024-06-27 15:07:03.6174|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5264
+2024-06-27 15:07:03.6174|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Fundoo
+2024-06-27 15:07:03.6174|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-27 15:07:03.6174|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-27 15:07:03.6174|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-27 15:07:03.6174|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-27 15:07:03.6174|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\
+2024-06-27 15:07:03.6174|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started
+2024-06-27 15:07:04.1063|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNR" accepted.
+2024-06-27 15:07:04.1063|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNQ" accepted.
+2024-06-27 15:07:04.1063|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNQ" started.
+2024-06-27 15:07:04.1063|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNR" started.
+2024-06-27 15:07:04.1063|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHIQ1MBNQ" received FIN.
+2024-06-27 15:07:04.1063|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHIQ1MBNR" received FIN.
+2024-06-27 15:07:04.1063|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHIQ1MBNR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:07:04.1063|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHIQ1MBNQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:07:04.1063|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNR" disconnecting.
+2024-06-27 15:07:04.1063|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNQ" disconnecting.
+2024-06-27 15:07:04.1063|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNR" stopped.
+2024-06-27 15:07:04.1063|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNQ" stopped.
+2024-06-27 15:07:04.2936|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNS" accepted.
+2024-06-27 15:07:04.2936|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNS" started.
+2024-06-27 15:07:04.2936|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNT" accepted.
+2024-06-27 15:07:04.2936|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNT" started.
+2024-06-27 15:07:04.3232|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/swagger/index.html - -
+2024-06-27 15:07:04.3979|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed.
+2024-06-27 15:07:04.3979|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 15:07:04.4149|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html'
+2024-06-27 15:07:04.4149|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2024-06-27 15:07:04.4787|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection.
+2024-06-27 15:07:04.4874|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection.
+2024-06-27 15:07:04.4874|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNS" completed keep alive response.
+2024-06-27 15:07:04.4874|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/swagger/index.html - - - 200 - text/html;charset=utf-8 166.9039ms
+2024-06-27 15:07:04.6592|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/_vs/browserLink - -
+2024-06-27 15:07:04.6592|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/_framework/aspnetcore-browser-refresh.js - -
+2024-06-27 15:07:04.6592|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNS" completed keep alive response.
+2024-06-27 15:07:04.6592|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/_framework/aspnetcore-browser-refresh.js - - - 200 13748 application/javascript;+charset=utf-8 1.0562ms
+2024-06-27 15:07:04.6842|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNT" completed keep alive response.
+2024-06-27 15:07:04.6842|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.1207ms
+2024-06-27 15:07:04.8364|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/swagger/v1/swagger.json - -
+2024-06-27 15:07:04.8364|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 15:07:04.8364|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json'
+2024-06-27 15:07:04.8364|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2024-06-27 15:07:04.9097|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNT" completed keep alive response.
+2024-06-27 15:07:04.9097|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 73.4791ms
+2024-06-27 15:07:13.0160|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHIQ1MBNS" received FIN.
+2024-06-27 15:07:13.0160|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHIQ1MBNT" received FIN.
+2024-06-27 15:07:13.0160|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHIQ1MBNS" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:07:13.0160|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHIQ1MBNT" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:07:13.0160|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNT" disconnecting.
+2024-06-27 15:07:13.0160|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNS" disconnecting.
+2024-06-27 15:07:13.0160|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNT" stopped.
+2024-06-27 15:07:13.0160|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNS" stopped.
+2024-06-27 15:07:27.0627|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNU" accepted.
+2024-06-27 15:07:27.0627|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNU" started.
+2024-06-27 15:07:27.0627|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5264/api/note/createnote application/json 107
+2024-06-27 15:07:27.0627|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 15:07:27.0627|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/note/createnote'
+2024-06-27 15:07:27.0627|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)' with route pattern 'api/note/createnote' is valid for the request path '/api/note/createnote'
+2024-06-27 15:07:27.0627|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:07:27.0627|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-06-27 15:07:27.0627|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request.
+2024-06-27 15:07:27.0979|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-06-27 15:07:27.1065|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-06-27 15:07:27.1065|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:07:27.1349|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateNote", controller = "Note"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateNote(ModelLayer.NoteML) on controller Fundoo.Controllers.NoteController (Fundoo).
+2024-06-27 15:07:27.1349|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-06-27 15:07:27.1349|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-06-27 15:07:27.1349|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-27 15:07:27.1349|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-06-27 15:07:27.1349|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-27 15:07:27.1349|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-06-27 15:07:27.2326|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-27 15:07:27.2515|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-06-27 15:07:27.2515|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML' ...
+2024-06-27 15:07:27.2515|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML' using the name '' in request data ...
+2024-06-27 15:07:27.2515|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-06-27 15:07:27.2515|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4MHIQ1MBNU", Request id "0HN4MHIQ1MBNU:00000002": started reading request body.
+2024-06-27 15:07:27.2515|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4MHIQ1MBNU", Request id "0HN4MHIQ1MBNU:00000002": done reading request body.
+2024-06-27 15:07:27.2636|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'ModelLayer.NoteML'
+2024-06-27 15:07:27.2636|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:07:27.2636|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:07:27.2636|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'noteML' of type 'ModelLayer.NoteML' ...
+2024-06-27 15:07:27.2636|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:07:27.2636|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:07:27.2636|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:07:27.2636|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:07:27.2636|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:07:27.2636|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.CreateNote (Fundoo) - Validation state: Valid
+2024-06-27 15:07:27.2636|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.CreateNote (Fundoo) with arguments (ModelLayer.NoteML)
+2024-06-27 15:07:27.5986|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'NoteId'} was not created on entity type 'NoteLabelEntity' as the properties are already covered by the index {'NoteId', 'LabelId'}.
+2024-06-27 15:07:27.8274|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2024-06-27 15:07:27.8478|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"ApplicationDbContext"' generated a temporary value for the property '"Id"."Note"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:07:27.8983|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:07:27.8983|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'ApplicationDbContext'.
+2024-06-27 15:07:27.9025|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'ApplicationDbContext'.
+2024-06-27 15:07:27.9025|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'ApplicationDbContext'.
+2024-06-27 15:07:27.9497|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:07:28.3690|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:07:28.3690|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'.
+2024-06-27 15:07:28.3767|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'.
+2024-06-27 15:07:28.4169|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-06-27 15:07:28.4208|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (1ms).
+2024-06-27 15:07:28.4334|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Notes] ([Description], [IsArchived], [IsTrashed], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Notes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-27 15:07:28.4630|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (33ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Notes] ([Description], [IsArchived], [IsTrashed], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Notes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-27 15:07:28.4806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The foreign key property 'Note.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-06-27 15:07:28.4806|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-06-27 15:07:28.4806|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction.
+2024-06-27 15:07:28.4806|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committed transaction.
+2024-06-27 15:07:28.4806|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:07:28.4971|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:07:28.4971|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction.
+2024-06-27 15:07:28.4971|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Note' tracked by 'ApplicationDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:07:28.4971|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2024-06-27 15:07:28.5344|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Note>()'
+2024-06-27 15:07:28.6380|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Note>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Note.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Note.Description (string) Required, 1], [Property: Note.IsArchived (bool) Required, 2], [Property: Note.IsTrashed (bool) Required, 3], [Property: Note.Title (string) Required, 4] }
+        SELECT n.Id, n.Description, n.IsArchived, n.IsTrashed, n.Title
+        FROM Notes AS n), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Note>, 
+    RepositoryLayer.Context.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)'
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Id], [n].[Description], [n].[IsArchived], [n].[IsTrashed], [n].[Title]
+FROM [Notes] AS [n]
+2024-06-27 15:07:28.6576|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Id], [n].[Description], [n].[IsArchived], [n].[IsTrashed], [n].[Title]
+FROM [Notes] AS [n]
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:07:28.6576|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:07:28.9300|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Fundoo.Controllers.NoteController.CreateNote (Fundoo), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1653.5142ms.
+2024-06-27 15:07:28.9300|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:07:28.9300|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:07:28.9300|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:07:28.9300|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:07:28.9300|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:07:28.9300|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:07:28.9300|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-06-27 15:07:28.9300|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-06-27 15:07:28.9300|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2024-06-27 15:07:28.9300|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-27 15:07:28.9300|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-27 15:07:28.9329|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-06-27 15:07:28.9329|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ModelLayer.ResponseML'.
+2024-06-27 15:07:28.9329|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-06-27 15:07:28.9329|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:07:28.9329|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:07:28.9329|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.NoteController.CreateNote (Fundoo) in 1801.5729ms
+2024-06-27 15:07:28.9329|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:07:28.9329|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNU" completed keep alive response.
+2024-06-27 15:07:28.9490|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.
+2024-06-27 15:07:28.9490|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5264/api/note/createnote application/json 107 - 201 - application/json;+charset=utf-8 1886.4718ms
+2024-06-27 15:07:33.0447|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHIQ1MBNU" received FIN.
+2024-06-27 15:07:33.0447|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHIQ1MBNU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:07:33.0447|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNU" disconnecting.
+2024-06-27 15:07:33.0447|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNU" stopped.
+2024-06-27 15:08:32.0887|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNV" accepted.
+2024-06-27 15:08:32.0887|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNV" started.
+2024-06-27 15:08:32.0887|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5264/api/note/createnote application/json 102
+2024-06-27 15:08:32.0887|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/note/createnote'
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)' with route pattern 'api/note/createnote' is valid for the request path '/api/note/createnote'
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-06-27 15:08:32.0923|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request.
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-06-27 15:08:32.0923|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-06-27 15:08:32.0923|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:08:32.0923|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateNote", controller = "Note"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateNote(ModelLayer.NoteML) on controller Fundoo.Controllers.NoteController (Fundoo).
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML' ...
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML' using the name '' in request data ...
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4MHIQ1MBNV", Request id "0HN4MHIQ1MBNV:00000002": started reading request body.
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN4MHIQ1MBNV", Request id "0HN4MHIQ1MBNV:00000002": done reading request body.
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'ModelLayer.NoteML'
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'noteML' of type 'ModelLayer.NoteML' ...
+2024-06-27 15:08:32.0923|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'noteML' of type 'ModelLayer.NoteML'.
+2024-06-27 15:08:32.0923|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:08:32.0923|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:08:32.0923|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:08:32.0923|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:08:32.0923|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.CreateNote (Fundoo) - Validation state: Valid
+2024-06-27 15:08:32.0923|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.CreateNote (Fundoo) with arguments (ModelLayer.NoteML)
+2024-06-27 15:08:32.1265|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"ApplicationDbContext"' generated a temporary value for the property '"Id"."Note"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'ApplicationDbContext'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'ApplicationDbContext'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'ApplicationDbContext'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Notes] ([Description], [IsArchived], [IsTrashed], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Notes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-27 15:08:32.1265|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Notes] ([Description], [IsArchived], [IsTrashed], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Notes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|The foreign key property 'Note.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committed transaction.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Note' tracked by 'ApplicationDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Id], [n].[Description], [n].[IsArchived], [n].[IsTrashed], [n].[Title]
+FROM [Notes] AS [n]
+2024-06-27 15:08:32.1265|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Id], [n].[Description], [n].[IsArchived], [n].[IsTrashed], [n].[Title]
+FROM [Notes] AS [n]
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Note' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:08:32.1265|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-06-27 15:08:32.1382|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Fundoo.Controllers.NoteController.CreateNote (Fundoo), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 38.86ms.
+2024-06-27 15:08:32.1382|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:08:32.1382|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-06-27 15:08:32.1382|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:08:32.1382|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-06-27 15:08:32.1382|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:08:32.1382|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:08:32.1382|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-06-27 15:08:32.1382|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-06-27 15:08:32.1382|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2024-06-27 15:08:32.1382|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-27 15:08:32.1382|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-27 15:08:32.1382|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-06-27 15:08:32.1382|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ModelLayer.ResponseML'.
+2024-06-27 15:08:32.1382|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-06-27 15:08:32.1382|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:08:32.1382|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-06-27 15:08:32.1382|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.NoteController.CreateNote (Fundoo) in 45.2542ms
+2024-06-27 15:08:32.1382|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.NoteController.CreateNote (Fundoo)'
+2024-06-27 15:08:32.1382|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNV" completed keep alive response.
+2024-06-27 15:08:32.1382|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.
+2024-06-27 15:08:32.1382|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5264/api/note/createnote application/json 102 - 201 - application/json;+charset=utf-8 49.8687ms
+2024-06-27 15:08:33.1416|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHIQ1MBNV" received FIN.
+2024-06-27 15:08:33.1416|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4MHIQ1MBNV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-27 15:08:33.1416|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNV" disconnecting.
+2024-06-27 15:08:33.1590|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4MHIQ1MBNV" stopped.

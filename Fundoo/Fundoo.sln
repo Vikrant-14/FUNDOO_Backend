@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fundoo", "Fundoo.csproj", "{BEC92052-7BD1-4237-9FC6-956B97D3CC79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fundoo", "Fundoo.csproj", "{BEC92052-7BD1-4237-9FC6-956B97D3CC79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "..\BusinessLayer\BusinessLayer.csproj", "{6AA45D1C-41D3-4858-9A5E-0CDBDA0E6C17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "..\BusinessLayer\BusinessLayer.csproj", "{6AA45D1C-41D3-4858-9A5E-0CDBDA0E6C17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLayer", "..\RepositoryLayer\RepositoryLayer.csproj", "{4F26E81B-A087-4198-9844-F3233D684EBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLayer", "..\RepositoryLayer\RepositoryLayer.csproj", "{4F26E81B-A087-4198-9844-F3233D684EBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelLayer", "..\ModelLayer\ModelLayer.csproj", "{E6B2167C-32E1-402A-9061-577ED8E70362}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelLayer", "..\ModelLayer\ModelLayer.csproj", "{E6B2167C-32E1-402A-9061-577ED8E70362}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQConsumerConsoleApplication", "..\RabbitMQConsumerConsoleApplication\RabbitMQConsumerConsoleApplication.csproj", "{FE9AFCFB-5B7E-4501-84A3-E2F71C9EE92A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E6B2167C-32E1-402A-9061-577ED8E70362}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6B2167C-32E1-402A-9061-577ED8E70362}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6B2167C-32E1-402A-9061-577ED8E70362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE9AFCFB-5B7E-4501-84A3-E2F71C9EE92A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9AFCFB-5B7E-4501-84A3-E2F71C9EE92A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9AFCFB-5B7E-4501-84A3-E2F71C9EE92A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9AFCFB-5B7E-4501-84A3-E2F71C9EE92A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

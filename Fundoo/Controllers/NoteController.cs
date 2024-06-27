@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using ModelLayer;
 using RepositoryLayer.CustomExecption;
 using RepositoryLayer.Entity;
+using RepositoryLayer.Utility;
 
 namespace Fundoo.Controllers
 {
@@ -16,11 +17,12 @@ namespace Fundoo.Controllers
     {
         private readonly INoteBL noteBL;
         private readonly ResponseML responseML;
-
-        public NoteController(INoteBL noteBL)
+        private readonly RabbitMQProducer _rabbitMQProducer;
+        public NoteController(INoteBL noteBL, RabbitMQProducer rabbitMQProducer)
         {
             this.noteBL = noteBL;
             responseML = new ResponseML();
+            _rabbitMQProducer = rabbitMQProducer;
         }
 
         [HttpPost("createnote")]
@@ -29,6 +31,9 @@ namespace Fundoo.Controllers
             try
             {
                 var note = noteBL.CreateNote(noteML);
+
+                //send inserted note data to the queue and consumer will listening this data from queue
+                _rabbitMQProducer.SendMessage(note);
 
                 responseML.Success = true;
                 responseML.Message = "Note Created Successfully";

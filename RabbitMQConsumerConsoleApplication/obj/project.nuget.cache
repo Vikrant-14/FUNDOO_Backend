@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "xEsKC3bBowEOwLDKYeQOV9iDo1LCIKg6NfH4BcCKgzSNhV0jwsaKyWBXXMZ9JzopzVFxx+8D99ySRgmY2qTkcA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kirti\\Vikrant\\CDAC\\FUNDOO\\RabbitMQConsumerConsoleApplication\\RabbitMQConsumerConsoleApplication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kirti\\.nuget\\packages\\rabbitmq.client\\6.8.1\\rabbitmq.client.6.8.1.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

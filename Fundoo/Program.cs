@@ -10,6 +10,7 @@ using NLog.Web;
 using RepositoryLayer.Context;
 using RepositoryLayer.Interface;
 using RepositoryLayer.Service;
+using RepositoryLayer.Utility;
 using System.Text;
 
 var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
@@ -42,6 +43,9 @@ try
     //Collaborator
     builder.Services.AddScoped<ICollaboratorBL, CollaboratorBL>();
     builder.Services.AddScoped<ICollaboratorRL, CollaboratorRL>();
+
+    //RabbitMQ
+    builder.Services.AddScoped<RabbitMQProducer>();
 
     builder.Services.AddControllers();
 
