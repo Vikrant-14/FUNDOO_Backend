@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using ModelLayer;
 using Org.BouncyCastle.Utilities;
@@ -194,7 +195,9 @@ namespace RepositoryLayer.Service
 
         public Note Archived(int id)
         {
-            var note = _context.Notes.FirstOrDefault(n => n.Id == id);
+            //var note = _context.Notes.FirstOrDefault(n => n.Id == id);
+            var noteList = _context.Notes.ToList();
+            var note = noteList.FirstOrDefault(n => n.Id == id);
 
             if (note == null)
             {
@@ -213,12 +216,16 @@ namespace RepositoryLayer.Service
             _context.Notes.Update(note);
             _context.SaveChanges();
 
+            RedisCacheHelper.SetToCache(cacheKey, _cache, noteList, 30, 15);
+
             return note;
         }
 
         public Note Trashed(int id)
         {
-            var note = _context.Notes.FirstOrDefault(n => n.Id == id);
+            //var note = _context.Notes.FirstOrDefault(n => n.Id == id);
+            var noteList = _context.Notes.ToList();
+            var note = noteList.FirstOrDefault(n => n.Id == id);
 
             if (note == null)
             {
@@ -242,31 +249,110 @@ namespace RepositoryLayer.Service
             _context.Notes.Update(note);
             _context.SaveChanges();
 
+            RedisCacheHelper.SetToCache(cacheKey, _cache, noteList, 30, 15);
+
             return note;
         }
 
         public IList<Note> GetAllTrashedNotes() 
         {
-            var notes = _context.Notes.Where(n => n.IsTrashed == true).ToList();
+            var cachedNotes = RedisCacheHelper.GetFromCache<List<Note>>(cacheKey, _cache);
+            IList<Note> note;
 
-            if(notes.Count == 0)
+            if (cachedNotes != null)
+            {
+                note = cachedNotes.Where(n => n.IsTrashed == true).ToList();
+
+                if (note != null)
+                {
+                    return note;
+                }
+            }
+
+            var noteList = _context.Notes.ToList();
+            note = noteList.Where(n => n.IsTrashed == true).ToList();
+
+            if(note.Count == 0)
             {
                 throw new NoteException("No Notes inside trashed");
             }
 
-            return notes;
+            RedisCacheHelper.SetToCache(cacheKey, _cache, noteList, 30, 15);
+
+            return note;
         }
 
         public IList<Note> GetAllArchivedNotes() 
         {
-            var notes = _context.Notes.Where(n => n.IsArchived == true).ToList();
+            var cachedNotes = RedisCacheHelper.GetFromCache<List<Note>>(cacheKey, _cache);
+            IList<Note> note;
 
-            if (notes.Count == 0)
+            if (cachedNotes != null)
             {
-                throw new NoteException("No Notes archived");
+                note = cachedNotes.Where(n => n.IsArchived == true).ToList();
+
+                if (note != null)
+                {
+                    return note;
+                }
             }
 
-            return notes;
+            var noteList = _context.Notes.ToList();
+            note = noteList.Where(n => n.IsArchived == true).ToList();
+
+            if (note.Count == 0)
+            {
+                throw new NoteException("No Notes inside trashed");
+            }
+
+            RedisCacheHelper.SetToCache(cacheKey, _cache, noteList, 30, 15);
+
+            return note;
+
         }
+
+
+        public IEnumerable<object> GetAllNotesWithLabels()
+        {
+            string cacheKey = "getNotesWithLabels";
+
+            // Try to get the data from cache
+            var notesWithLabelsFromCache = RedisCacheHelper.GetFromCache<List<object>>(cacheKey, _cache);
+
+            // If cache is not empty, return the cached data
+            if (notesWithLabelsFromCache != null && notesWithLabelsFromCache.Any())
+            {
+                return notesWithLabelsFromCache;
+            }
+
+            // Fetch data from database if cache is empty
+            var notesWithLabelsFromDb = _context.Notes.Include(n => n.NoteLabel)
+                                                      .ThenInclude(l => l.Label)
+                                                      .Select(n => new
+                                                      {
+                                                          NoteId = n.Id,
+                                                          Title = n.Title,
+                                                          Description = n.Description,
+                                                          IsTrashed = n.IsTrashed,
+                                                          IsArchived = n.IsArchived,
+                                                          Labels = n.NoteLabel.Select(l => new
+                                                          {
+                                                              LabelId = l.Label.Id,
+                                                              LabelName = l.Label.LabelName
+                                                          }).ToList()
+                                                      }).ToList();
+
+            // If no notes and labels found in the database, throw an exception
+            if (!notesWithLabelsFromDb.Any())
+            {
+                throw new NoteException("No notes and label found");
+            }
+
+            // Set the data to cache
+            RedisCacheHelper.SetToCache(cacheKey, _cache, notesWithLabelsFromDb, 30, 15);
+
+            return notesWithLabelsFromDb;
+        }
+
     }
 }

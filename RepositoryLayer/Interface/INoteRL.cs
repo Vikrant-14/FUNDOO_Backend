@@ -20,6 +20,6 @@ namespace RepositoryLayer.Interface
         public Note Trashed(int id);
         public IList<Note> GetAllTrashedNotes();
         public IList<Note> GetAllArchivedNotes();
-
+        public IEnumerable<object> GetAllNotesWithLabels();
     }
 }

@@ -136,5 +136,17 @@ namespace BusinessLayer.Service
                 throw;
             }
         }
+
+        public IEnumerable<object> GetAllNotesWithLabels()
+        {
+            try
+            {
+                return noteRL.GetAllNotesWithLabels();
+            }
+            catch (NoteException)
+            {
+                throw;
+            }
+        }
     }
 }

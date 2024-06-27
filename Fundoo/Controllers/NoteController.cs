@@ -251,5 +251,27 @@ namespace Fundoo.Controllers
                 return StatusCode(404, responseML);
             }
         }
+
+        [HttpGet("get-all-notes-with-labels")]
+        public IActionResult GetAllNotesWithLabels()
+        {
+            try
+            {
+                var notes = noteBL.GetAllNotesWithLabels();
+
+                responseML.Success = true;
+                responseML.Message = "Note Fetch Successfully";
+                responseML.Data = notes;
+
+                return StatusCode(200, responseML);
+            }
+            catch (NoteException ex)
+            {
+                responseML.Success = false;
+                responseML.Message = ex.Message;
+
+                return StatusCode(404, responseML);
+            }
+        }
     }
 }
