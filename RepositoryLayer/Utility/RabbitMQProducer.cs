@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using ModelLayer;
+using Newtonsoft.Json;
 using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace RepositoryLayer.Utility
 {
     public class RabbitMQProducer
     {
-        public void SendMessage<T>(T message)
+        public void SendMessage(string message, string email, string subject)
         {
             //Here we specify the Rabbit MQ Server. we use rabbitmq docker image and use it
             var factory = new ConnectionFactory()
@@ -29,7 +30,12 @@ namespace RepositoryLayer.Utility
             channel.QueueDeclare("NoteQueue", exclusive: false);
 
             //Serialize the message
-            var json = JsonConvert.SerializeObject(message);
+            var json = JsonConvert.SerializeObject(new EmailML
+            {
+                To = email,
+                Body = message,
+                Subject = subject
+            });
             var body = Encoding.UTF8.GetBytes(json);
 
             //put the data on to the note queue

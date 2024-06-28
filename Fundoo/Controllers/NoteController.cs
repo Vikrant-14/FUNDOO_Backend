@@ -33,7 +33,7 @@ namespace Fundoo.Controllers
                 var note = noteBL.CreateNote(noteML);
 
                 //send inserted note data to the queue and consumer will listening this data from queue
-                _rabbitMQProducer.SendMessage(note);
+                //_rabbitMQProducer.SendMessage(note);
 
                 responseML.Success = true;
                 responseML.Message = "Note Created Successfully";
