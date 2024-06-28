@@ -21,14 +21,16 @@ namespace Fundoo.Controllers
     {
         private readonly IUserBL userBL;
         private readonly ResponseML responseML;
+        private readonly RabbitMQProducer _rabbitMQ;
 
         const string SessionUserId = "_UserId";
         const string SessionUserName = "_UserName";
 
-        public UserController(IUserBL userBL)
+        public UserController(IUserBL userBL, RabbitMQProducer rabbitMQ)
         {
             this.userBL = userBL;
             responseML = new ResponseML();
+            _rabbitMQ = rabbitMQ;
         }
 
         [HttpPost("adduser")]
@@ -84,6 +86,8 @@ namespace Fundoo.Controllers
                     responseML.Message = "User Registered Successfully";
                     responseML.Data = result;
                 }
+
+                _rabbitMQ.SendMessage(result);
 
             }
             catch (UserException ex)
