@@ -10,16 +10,16 @@ namespace BusinessLayer.Interface
 {
     public interface INoteBL
     {
-        public List<Note> GetNotes();
-        public Note GetNoteById(int id);
+        public IList<NoteWithLabelDTO> GetNotes();
+        public NoteWithLabelDTO GetNoteById(int id);
         public Note CreateNote(NoteML model);
         public Task<Note> CreateNoteAsync(NoteML model);
         public Note UpdateNote(int id, NoteML model);
         public Note DeleteNote(int id);
         public Note Archived(int id);
         public Note Trashed(int id);
-        public IList<Note> GetAllTrashedNotes();
-        public IList<Note> GetAllArchivedNotes();
-        public IEnumerable<object> GetAllNotesWithLabels();
+        public IList<NoteWithLabelDTO> GetAllTrashedNotes();
+        public IList<NoteWithLabelDTO> GetAllArchivedNotes();
+        public IEnumerable<NoteWithLabelDTO> GetAllNotesWithLabels();
     }
 }

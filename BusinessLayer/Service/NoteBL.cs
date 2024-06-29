@@ -53,7 +53,7 @@ namespace BusinessLayer.Service
                 throw;
             }
         }
-        public Note GetNoteById(int id)
+        public NoteWithLabelDTO GetNoteById(int id)
         {
             try
             {
@@ -65,7 +65,7 @@ namespace BusinessLayer.Service
             }
         }
 
-        public List<Note> GetNotes()
+        public IList<NoteWithLabelDTO> GetNotes()
         {
             try
             {
@@ -113,7 +113,7 @@ namespace BusinessLayer.Service
             }
         }
 
-        public IList<Note> GetAllTrashedNotes()
+        public IList<NoteWithLabelDTO> GetAllTrashedNotes()
         {
             try
             {
@@ -125,7 +125,7 @@ namespace BusinessLayer.Service
             }
         }
 
-        public IList<Note> GetAllArchivedNotes()
+        public IList<NoteWithLabelDTO> GetAllArchivedNotes()
         {
             try
             {
@@ -137,7 +137,7 @@ namespace BusinessLayer.Service
             }
         }
 
-        public IEnumerable<object> GetAllNotesWithLabels()
+        public IEnumerable<NoteWithLabelDTO> GetAllNotesWithLabels()
         {
             try
             {
