@@ -2450,3 +2450,7 @@ ORDER BY [n].[Id], [t].[NoteId], [t].[LabelId]
 2024-06-29 12:31:45.6472|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.NoteController.GetNoteById (Fundoo)'
 2024-06-29 12:31:45.6472|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4O1379VIC4" completed keep alive response.
 2024-06-29 12:31:45.6472|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/api/note/getnotebyid/1008 - - - 200 - application/json;+charset=utf-8 11.8698ms
+2024-06-29 12:31:49.7418|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4O1379VIC4" received FIN.
+2024-06-29 12:31:49.7418|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4O1379VIC4" disconnecting.
+2024-06-29 12:31:49.7418|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4O1379VIC4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-29 12:31:49.7418|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4O1379VIC4" stopped.

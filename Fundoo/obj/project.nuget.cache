@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "iBAEby1N0qWBNOnqllowOz2SL+Y/IlVy8tuBLWN/jQ5L/emZcJTi2hFbF9RgeBTMcs3fbhQxTHhU/Gp+Jdxd0A==",
+  "dgSpecHash": "5+X6x/SEbvYpgazEya3gfEVS5dJ9NiRZsdFrqfR2oV/DsP1Ko2i99sOX3tIoSD0C2n7h4zW/jSJBjAQVMYb3pw==",
   "success": true,
   "projectFilePath": "C:\\Users\\kirti\\Vikrant\\CDAC\\FUNDOO\\Fundoo\\Fundoo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kirti\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\confluent.kafka\\2.4.0\\confluent.kafka.2.4.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\librdkafka.redist\\2.4.0\\librdkafka.redist.2.4.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\mailkit\\4.6.0\\mailkit.4.6.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",

@@ -1,5 +1,6 @@
 using BusinessLayer.Interface;
 using BusinessLayer.Service;
+using Confluent.Kafka;
 using Fundoo.GLobalExceptionHandler;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -137,6 +138,11 @@ try
     //Logger
     builder.Logging.ClearProviders();
     builder.Host.UseNLog();
+
+    //Kafka Producer
+    var producerConfiguration = new ProducerConfig();
+    builder.Configuration.Bind("producerConfiguration",producerConfiguration);
+    builder.Services.AddSingleton<ProducerConfig>(producerConfiguration);
 
     //Build
     var app = builder.Build();

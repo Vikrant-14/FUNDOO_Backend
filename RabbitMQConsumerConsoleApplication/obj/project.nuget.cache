@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "CnoEr3P9yQ5SXkhUbOY2enmj4rDpeRjuxaoq8ACL8hG8qQMtTnzo46ZRpcVmAihXoNzbiLg8mkGoeajgJK5C3g==",
+  "dgSpecHash": "D0ItUg0qXID8k15K3Y+6GP19mxMLOKbPHH8W+QZiuThuuajSCrI5X+cAUrsjeeGtjbmXsG+R24y9uqQwTp2AtA==",
   "success": true,
   "projectFilePath": "C:\\Users\\kirti\\Vikrant\\CDAC\\FUNDOO\\RabbitMQConsumerConsoleApplication\\RabbitMQConsumerConsoleApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kirti\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\confluent.kafka\\2.4.0\\confluent.kafka.2.4.0.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\librdkafka.redist\\2.4.0\\librdkafka.redist.2.4.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\mailkit\\4.6.0\\mailkit.4.6.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
