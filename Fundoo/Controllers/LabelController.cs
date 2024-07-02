@@ -1,7 +1,9 @@
 ﻿using BusinessLayer.Interface;
+using Confluent.Kafka;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer;
+using Newtonsoft.Json;
 using RepositoryLayer.CustomExecption;
 
 namespace Fundoo.Controllers
@@ -12,24 +14,38 @@ namespace Fundoo.Controllers
     {
         private readonly ILabelBL labelBL;
         private readonly ResponseML responseML;
+        private readonly ILogger<LabelController> _logger;
+        private readonly ProducerConfig _prodConfig;
+        private readonly IConfiguration _configuration;
 
-        private readonly ILogger<LabelController> _logger;   
-
-        public LabelController(ILabelBL labelBL, ILogger<LabelController> logger)
+        public LabelController(ILabelBL labelBL, ILogger<LabelController> logger, ProducerConfig prodConfig, IConfiguration configuration)
         {
             this.labelBL = labelBL; 
             responseML = new ResponseML();
             _logger = logger;
+            _prodConfig = prodConfig;
+            _configuration = configuration;
         }
 
         [HttpPost("create-label")]
-        public IActionResult CreateLabel(LabelML model)
+        public async Task<ActionResult> CreateLabel(LabelML model)
         {
             try
             {
-
-  
                 var result = labelBL.CreateLabel(model);
+
+                string serializedData = JsonConvert.SerializeObject(model);
+                var topic = _configuration.GetSection("TopicName").Value;
+
+                using (var producer = new ProducerBuilder<Null, string>(_prodConfig).Build())
+                {
+                    await producer.ProduceAsync(topic, new Message<Null, string>
+                    {
+                        Value = serializedData
+                    });
+
+                    producer.Flush(TimeSpan.FromSeconds(10));
+                }
 
                 responseML.Success = true;
                 responseML.Message = "Label added successfully";
