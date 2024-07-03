@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KafkaConsumer2ConsoleApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6f1b6c43db15e20a60f322895b7d94c5f5735bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7effe55ebbb4ae2ccd2453307cb33f094a9462a0")]
 [assembly: System.Reflection.AssemblyProductAttribute("KafkaConsumer2ConsoleApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KafkaConsumer2ConsoleApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,8 +1,9 @@
 ﻿using Confluent.Kafka;
+using System;
 
 var config = new ConsumerConfig
 {
-    GroupId = "my-consumer-group",
+    GroupId = "my-consumer-group-1", // Different group ID
     BootstrapServers = "localhost:9092"
 };
 
@@ -13,6 +14,6 @@ using (var consumer = new ConsumerBuilder<Null, string>(config).Build())
     while (true)
     {
         var labelDetails = consumer.Consume();
-        Console.WriteLine(labelDetails.Message.Value);
+        Console.WriteLine($"Consumer 1: {labelDetails.Message.Value}");
     }
 }

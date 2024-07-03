@@ -42,7 +42,7 @@ namespace Fundoo.Controllers
                     await producer.ProduceAsync(topic, new Message<Null, string>
                     {
                         Value = serializedData
-                    });
+                    });   
 
                     producer.Flush(TimeSpan.FromSeconds(10));
                 }
