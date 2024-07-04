@@ -1343,6 +1343,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
+          "Confluent.Kafka": "2.4.0",
           "MailKit": "4.6.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.0",
           "Microsoft.AspNetCore.Cryptography.KeyDerivation": "6.0.0",

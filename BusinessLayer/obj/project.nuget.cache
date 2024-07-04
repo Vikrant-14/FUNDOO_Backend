@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "3KLdGYazkrlQfpCU4Ja0iGiDAEpW0ITOnsUsKqyrpR8VkBiqvqOjNjngeakTzIyQxy69skvNmO4Ech5yyJ7bIA==",
+  "dgSpecHash": "CqTVT4V83ceihf5/d4YHIuCnhhWCo/3YU1VAvNH43V8s0cZBXRSlqNe6W/GFyc3CN313HYWd9Dyok1XpXQ52cQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\kirti\\Vikrant\\CDAC\\FUNDOO\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kirti\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\confluent.kafka\\2.4.0\\confluent.kafka.2.4.0.nupkg.sha512",
+    "C:\\Users\\kirti\\.nuget\\packages\\librdkafka.redist\\2.4.0\\librdkafka.redist.2.4.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\mailkit\\4.6.0\\mailkit.4.6.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "C:\\Users\\kirti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",

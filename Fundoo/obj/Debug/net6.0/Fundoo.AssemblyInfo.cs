@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fundoo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bc5553b6a76afeec591b18d36aabb8df6f7b465")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd7a0cce47f45a8dc9066dc0549ea78b1e349df0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fundoo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fundoo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -68,11 +68,11 @@ namespace BusinessLayer.Service
             }
         }
 
-        public Label UpdateLabel(string labelName, LabelML model)
+        public Label UpdateLabel(int id, LabelML model)
         {
             try
             {
-                return labelRL.UpdateLabel(labelName, model);
+                return labelRL.UpdateLabel(id, model);
             }
             catch (LabelException)
             {

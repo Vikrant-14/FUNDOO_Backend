@@ -1,29 +1,89 @@
 ﻿using Confluent.Kafka;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 
-var config = new ConsumerConfig
+public class KafkaConsumerService
 {
-    GroupId = "my-consumer-group-1", // Different group ID
-    BootstrapServers = "localhost:9092",
-    AutoOffsetReset = AutoOffsetReset.Earliest // Ensures the consumer starts from the beginning if no previous offset is found
-};
+    private readonly string _bootstrapServers;
+    private readonly string _groupId;
+    private readonly string _topic;
+    private readonly int _consumerId;
 
-using (var consumer = new ConsumerBuilder<Null, string>(config).Build())
-{
-    consumer.Subscribe("testdata");
-
-    CancellationTokenSource token = new();
-
-    try
+    public KafkaConsumerService(string bootstrapServers, string groupId, string topic, int consumerId)
     {
-        while (true)
+        _bootstrapServers = bootstrapServers;
+        _groupId = groupId;
+        _topic = topic;
+        _consumerId = consumerId;
+    }
+
+    public async Task StartConsumingAsync(CancellationToken cancellationToken)
+    {
+        var consumerConfig = new ConsumerConfig
         {
-            var labelDetails = consumer.Consume(token.Token);
-            Console.WriteLine($"Consumer 1: {labelDetails.Message.Value}");
+            BootstrapServers = _bootstrapServers,
+            GroupId = _groupId,
+            AutoOffsetReset = AutoOffsetReset.Earliest
+        };
+
+        using var consumer = new ConsumerBuilder<Ignore, string>(consumerConfig)
+            .SetPartitionsAssignedHandler((c, partitions) =>
+            {
+                Console.WriteLine($"Consumer {_consumerId} assigned to partitions: [{string.Join(", ", partitions)}]");
+            })
+            .SetPartitionsRevokedHandler((c, partitions) =>
+            {
+                Console.WriteLine($"Consumer {_consumerId} revoked from partitions: [{string.Join(", ", partitions)}]");
+            })
+            .Build();
+
+        consumer.Subscribe(_topic);
+
+        try
+        {
+            while (!cancellationToken.IsCancellationRequested)
+            {
+                var consumeResult = consumer.Consume(cancellationToken);
+                Console.WriteLine($"Consumer {_consumerId}: {consumeResult.Message.Value} from partition: {consumeResult.Partition}");
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            consumer.Close();
         }
     }
-    catch (Exception)
+}
+
+class Program
+{
+    static async Task Main(string[] args)
     {
-        throw;
+        var bootstrapServers = "localhost:9092";
+        var groupId = "my-consumer-group";
+        var topic = "KafkaTopic1";
+
+        Console.WriteLine("Consumer started. Press [Enter] to stop.");
+
+        var cancellationTokenSource = new CancellationTokenSource();
+
+        var consumer1 = new KafkaConsumerService(bootstrapServers, groupId, topic, 5);
+        var consumer2 = new KafkaConsumerService(bootstrapServers, groupId, topic, 9);
+
+        var consumerTask1 = consumer1.StartConsumingAsync(cancellationTokenSource.Token);
+        var consumerTask2 = consumer2.StartConsumingAsync(cancellationTokenSource.Token);
+
+        Console.ReadLine();
+
+        cancellationTokenSource.Cancel(); // Stop consuming
+
+        try
+        {
+            await Task.WhenAll(consumerTask1, consumerTask2); // Wait for all consumers to complete
+        }
+        catch (OperationCanceledException ie)
+        {
+            Console.WriteLine(ie.Message);
+        }
     }
 }

@@ -140,12 +140,17 @@ try
     builder.Host.UseNLog();
 
     //Kafka Producer
-    var producerConfiguration = new ProducerConfig();
-    builder.Configuration.Bind("producerConfiguration",producerConfiguration);
-    builder.Services.AddSingleton<ProducerConfig>(producerConfiguration);
+    var producerConfig = new ProducerConfig();
+    builder.Configuration.Bind("ProducerConfiguration", producerConfig);
+    builder.Services.AddSingleton(producerConfig);
+    builder.Services.AddScoped<KafkaTopicCreator>();
+
+  
 
     //Build
     var app = builder.Build();
+
+   
 
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
@@ -169,6 +174,13 @@ try
     app.UseSession();
 
     app.MapControllers();
+
+    // Create Kafka Topic
+    using (var scope = app.Services.CreateScope())
+    {
+        var topicCreator = scope.ServiceProvider.GetRequiredService<KafkaTopicCreator>();
+        await topicCreator.CreateTopicAsync();
+    }
 
     app.Run();
 }

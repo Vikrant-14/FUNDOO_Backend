@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using ModelLayer;
 using Newtonsoft.Json;
 using RepositoryLayer.CustomExecption;
+using System.Runtime.InteropServices;
 
 namespace Fundoo.Controllers
 {
@@ -30,19 +31,20 @@ namespace Fundoo.Controllers
         [HttpPost("create-label")]
         public async Task<ActionResult> CreateLabel(LabelML model)
         {
+            var responseML = new ResponseML();
             try
             {
-                var result = labelBL.CreateLabel(model);
+                var result = labelBL.CreateLabel(model); // Ensure labelBL is properly defined
 
                 string serializedData = JsonConvert.SerializeObject(model);
-                var topic = _configuration.GetSection("TopicName").Value;
+                var topic = _configuration.GetValue<string>("TopicConfiguration:TopicName");
 
                 using (var producer = new ProducerBuilder<Null, string>(_prodConfig).Build())
                 {
                     await producer.ProduceAsync(topic, new Message<Null, string>
                     {
                         Value = serializedData
-                    });   
+                    });
 
                     producer.Flush(TimeSpan.FromSeconds(10));
                 }
@@ -54,7 +56,7 @@ namespace Fundoo.Controllers
                 _logger.LogInformation("Label Created and trace by NLOGGER");
                 return StatusCode(201, responseML);
             }
-            catch(LabelException ex)
+            catch (LabelException ex)
             {
                 responseML.Success = false;
                 responseML.Message = ex.Message;
@@ -63,12 +65,36 @@ namespace Fundoo.Controllers
             }
         }
 
-        [HttpPut("update-label")]
-        public IActionResult UpdateLabel(string labelName, LabelML model)
+        [HttpPut("update-label/{id}")]
+        public async Task<ActionResult> UpdateLabel(int id,[FromBody] LabelML model)
         {
             try
             {
-                var result = labelBL.UpdateLabel(labelName, model);
+                var result = labelBL.UpdateLabel(id, model);
+
+                int partition1 = 0;
+                int partition2 = 1;
+
+                string serializedData = JsonConvert.SerializeObject(result);
+                var topic = _configuration.GetValue<string>("TopicConfiguration:TopicName");
+
+                using ( var producer = new ProducerBuilder<Null,string>(_prodConfig).Build() ) 
+                {
+                    if( result.Id % 2 == 0 )
+                    {
+                        await producer.ProduceAsync(new TopicPartition(topic, partition1), new Message<Null, string>
+                        {
+                            Value = serializedData
+                        });
+                    }
+                    else
+                    {
+                        await producer.ProduceAsync(new TopicPartition(topic, partition2), new Message<Null, string>
+                        {
+                            Value = serializedData
+                        });
+                    }
+                }
 
                 responseML.Success = true;
                 responseML.Message = "Label updated successfully";

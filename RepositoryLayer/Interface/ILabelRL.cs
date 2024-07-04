@@ -11,7 +11,7 @@ namespace RepositoryLayer.Interface
     public interface ILabelRL
     {
         public Label CreateLabel(LabelML model);
-        public Label UpdateLabel(string labelName, LabelML model);
+        public Label UpdateLabel(int id, LabelML model);
         public Label GetLabelById(int id);
         public IList<Label> GetAllLabels();
         public Label DeleteLabel(int id);

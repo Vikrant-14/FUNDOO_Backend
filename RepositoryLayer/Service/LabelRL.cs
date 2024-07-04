@@ -33,9 +33,9 @@ namespace RepositoryLayer.Service
             return label;
         }
 
-        public Label UpdateLabel(string labelName, LabelML model)
+        public Label UpdateLabel(int id, LabelML model)
         {
-            var label = _context.Labels.FirstOrDefault(l => l.LabelName == labelName);
+            var label = _context.Labels.FirstOrDefault(l => l.Id == id);
 
             if (label == null)
             {
