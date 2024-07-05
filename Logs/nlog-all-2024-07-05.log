@@ -2672,3 +2672,680 @@ SELECT @@ROWCOUNT;
 2024-07-05 14:34:00.1973|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
 2024-07-05 14:34:00.1973|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.LabelController.UpdateLabel (Fundoo) in 35.8249ms
 2024-07-05 14:34:00.1973|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.LabelController.UpdateLabel (Fundoo)'
+2024-07-05 14:34:05.2484|ERROR|Microsoft.AspNetCore.Session.SessionMiddleware|Error closing the session.|StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=HMGET, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 2, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: HP(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=12,Max=1000), WORKER: (Busy=3,Free=32764,Min=12,Max=32767), POOL: (Threads=14,QueuedItems=0,CompletedItems=183,Timers=6), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefreshAsync(String key, Boolean getData, CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.RefreshAsync(String key, CancellationToken token)
+   at Microsoft.AspNetCore.Session.DistributedSession.CommitAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+2024-07-05 14:34:05.2484|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFL" completed keep alive response.
+2024-07-05 14:34:05.2484|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.
+2024-07-05 14:34:05.2484|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT http://localhost:5264/api/label/update-label/1011 application/json 32 - 200 - application/json;+charset=utf-8 5085.1024ms
+2024-07-05 14:34:05.3415|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFL" received FIN.
+2024-07-05 14:34:05.3415|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFL" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-07-05 14:34:05.3415|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFL" disconnecting.
+2024-07-05 14:34:05.3415|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFL" stopped.
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFM" accepted.
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFM" started.
+2024-07-05 14:39:28.1115|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/api/note/get-all-notes-with-labels - -
+2024-07-05 14:39:28.1115|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/note/get-all-notes-with-labels'
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)' with route pattern 'api/note/get-all-notes-with-labels' is valid for the request path '/api/note/get-all-notes-with-labels'
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)'
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-07-05 14:39:28.1115|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-07-05 14:39:28.1115|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)'
+2024-07-05 14:39:28.1115|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAllNotesWithLabels", controller = "Note"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllNotesWithLabels() on controller Fundoo.Controllers.NoteController (Fundoo).
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-07-05 14:39:28.1115|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-07-05 14:39:28.1115|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:39:28.1115|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:39:28.1115|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:39:28.1115|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:39:28.1115|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo) - Validation state: Valid
+2024-07-05 14:39:33.1313|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:39:33.1313|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:39:33.1313|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:39:33.1313|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:39:33.1313|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo) in 5016.1753ms
+2024-07-05 14:39:33.1313|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)'
+2024-07-05 14:39:38.2564|ERROR|Microsoft.AspNetCore.Session.SessionMiddleware|Error closing the session.|StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=HMGET, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 1, async-ops: 3, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: HP(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=12,Max=1000), WORKER: (Busy=1,Free=32766,Min=12,Max=32767), POOL: (Threads=14,QueuedItems=0,CompletedItems=1551,Timers=7), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefreshAsync(String key, Boolean getData, CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.RefreshAsync(String key, CancellationToken token)
+   at Microsoft.AspNetCore.Session.DistributedSession.CommitAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+2024-07-05 14:39:38.2731|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFM" completed keep alive response.
+2024-07-05 14:39:38.2731|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/api/note/get-all-notes-with-labels - - - 500 - application/json 10161.2302ms
+2024-07-05 14:39:46.5898|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFM" received FIN.
+2024-07-05 14:39:46.5898|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-07-05 14:39:46.5898|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFM" disconnecting.
+2024-07-05 14:39:46.5898|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFM" stopped.
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFN" accepted.
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFN" started.
+2024-07-05 14:39:57.0622|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/api/note/get-all-notes-with-labels - -
+2024-07-05 14:39:57.0622|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/note/get-all-notes-with-labels'
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)' with route pattern 'api/note/get-all-notes-with-labels' is valid for the request path '/api/note/get-all-notes-with-labels'
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)'
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-07-05 14:39:57.0622|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-07-05 14:39:57.0622|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)'
+2024-07-05 14:39:57.0622|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAllNotesWithLabels", controller = "Note"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllNotesWithLabels() on controller Fundoo.Controllers.NoteController (Fundoo).
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-07-05 14:39:57.0622|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-07-05 14:39:57.0622|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:39:57.0622|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:39:57.0622|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:39:57.0622|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:39:57.0622|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo) - Validation state: Valid
+2024-07-05 14:39:57.1144|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2024-07-05 14:39:57.1215|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Note>()
+    .Include(n => n.NoteLabel)
+    .ThenInclude(l => l.Label)
+    .Select(n => new NoteWithLabelDTO{ 
+        NoteId = n.Id, 
+        Title = n.Title, 
+        Description = n.Description, 
+        IsTrashed = n.IsTrashed, 
+        IsArchived = n.IsArchived, 
+        Labels = n.NoteLabel
+            .Select(l => new LabelDTO{ 
+                LableId = l.Label.Id, 
+                LabelName = l.Label.LabelName 
+            }
+            )
+            .ToList() 
+    }
+    )'
+2024-07-05 14:39:57.2033|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<NoteWithLabelDTO>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Client Projections:
+            0 -> 0
+            1 -> 1
+            2 -> 2
+            3 -> 3
+            4 -> 4
+            5 -> 5
+            6 -> 6
+            7 -> 7
+            8 -> 8
+        SELECT n.Id, n.Title, n.Description, n.IsTrashed, n.IsArchived, t.LableId, t.LabelName, t.NoteId, t.LabelId
+        FROM Notes AS n
+        LEFT JOIN 
+        (
+            SELECT l.Id AS LableId, l.LabelName, n0.NoteId, n0.LabelId
+            FROM NoteLabelEntities AS n0
+            INNER JOIN Labels AS l ON n0.LabelId == l.Id
+        ) AS t ON n.Id == t.NoteId
+        ORDER BY n.Id ASC, t.NoteId ASC, t.LabelId ASC), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, NoteWithLabelDTO>, 
+    RepositoryLayer.Context.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)'
+2024-07-05 14:39:57.2033|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-07-05 14:39:57.2033|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2024-07-05 14:39:57.2033|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:39:57.2033|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:39:57.2033|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Id], [n].[Title], [n].[Description], [n].[IsTrashed], [n].[IsArchived], [t].[LableId], [t].[LabelName], [t].[NoteId], [t].[LabelId]
+FROM [Notes] AS [n]
+LEFT JOIN (
+    SELECT [l].[Id] AS [LableId], [l].[LabelName], [n0].[NoteId], [n0].[LabelId]
+    FROM [NoteLabelEntities] AS [n0]
+    INNER JOIN [Labels] AS [l] ON [n0].[LabelId] = [l].[Id]
+) AS [t] ON [n].[Id] = [t].[NoteId]
+ORDER BY [n].[Id], [t].[NoteId], [t].[LabelId]
+2024-07-05 14:39:57.2152|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [n].[Id], [n].[Title], [n].[Description], [n].[IsTrashed], [n].[IsArchived], [t].[LableId], [t].[LabelName], [t].[NoteId], [t].[LabelId]
+FROM [Notes] AS [n]
+LEFT JOIN (
+    SELECT [l].[Id] AS [LableId], [l].[LabelName], [n0].[NoteId], [n0].[LabelId]
+    FROM [NoteLabelEntities] AS [n0]
+    INNER JOIN [Labels] AS [l] ON [n0].[LabelId] = [l].[Id]
+) AS [t] ON [n].[Id] = [t].[NoteId]
+ORDER BY [n].[Id], [t].[NoteId], [t].[LabelId]
+2024-07-05 14:39:57.2152|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-07-05 14:39:57.2152|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:39:57.2152|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:39:57.2287|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 161.6499ms.
+2024-07-05 14:39:57.2287|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:39:57.2287|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:39:57.2287|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:39:57.2287|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:39:57.2287|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:39:57.2287|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:39:57.2287|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:39:57.2287|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-07-05 14:39:57.2287|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2024-07-05 14:39:57.2287|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-07-05 14:39:57.2287|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2024-07-05 14:39:57.2287|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-07-05 14:39:57.2287|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ModelLayer.ResponseML'.
+2024-07-05 14:39:57.2287|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:39:57.2287|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:39:57.2287|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:39:57.2287|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo) in 163.7737ms
+2024-07-05 14:39:57.2287|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)'
+2024-07-05 14:39:57.2287|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFN" completed keep alive response.
+2024-07-05 14:39:57.2287|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.
+2024-07-05 14:39:57.2287|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/api/note/get-all-notes-with-labels - - - 200 - application/json;+charset=utf-8 168.2898ms
+2024-07-05 14:40:01.6053|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFN" received FIN.
+2024-07-05 14:40:01.6053|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFN" disconnecting.
+2024-07-05 14:40:01.6053|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFN" stopped.
+2024-07-05 14:40:01.6053|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-07-05 14:40:03.6796|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFO" accepted.
+2024-07-05 14:40:03.6796|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFO" started.
+2024-07-05 14:40:03.6796|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/api/note/get-all-notes-with-labels - -
+2024-07-05 14:40:03.6796|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-07-05 14:40:03.6796|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/note/get-all-notes-with-labels'
+2024-07-05 14:40:03.6796|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)' with route pattern 'api/note/get-all-notes-with-labels' is valid for the request path '/api/note/get-all-notes-with-labels'
+2024-07-05 14:40:03.6796|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)'
+2024-07-05 14:40:03.6796|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-07-05 14:40:03.6796|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-07-05 14:40:03.6796|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-07-05 14:40:03.6796|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)'
+2024-07-05 14:40:03.6796|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAllNotesWithLabels", controller = "Note"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllNotesWithLabels() on controller Fundoo.Controllers.NoteController (Fundoo).
+2024-07-05 14:40:03.6796|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-07-05 14:40:03.6796|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-07-05 14:40:03.6796|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-07-05 14:40:03.6796|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-07-05 14:40:03.6796|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-07-05 14:40:03.6796|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-07-05 14:40:03.6834|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:03.6834|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo) - Validation state: Valid
+2024-07-05 14:40:03.6834|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6.0571ms.
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:03.6834|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-07-05 14:40:03.6834|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2024-07-05 14:40:03.6834|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-07-05 14:40:03.6834|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2024-07-05 14:40:03.6834|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-07-05 14:40:03.6834|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ModelLayer.ResponseML'.
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:03.6834|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:03.6834|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo) in 9.1905ms
+2024-07-05 14:40:03.6834|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)'
+2024-07-05 14:40:03.6834|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFO" completed keep alive response.
+2024-07-05 14:40:03.6834|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/api/note/get-all-notes-with-labels - - - 200 - application/json;+charset=utf-8 10.3201ms
+2024-07-05 14:40:04.5856|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/api/note/get-all-notes-with-labels - -
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/note/get-all-notes-with-labels'
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)' with route pattern 'api/note/get-all-notes-with-labels' is valid for the request path '/api/note/get-all-notes-with-labels'
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)'
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-07-05 14:40:04.5856|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)'
+2024-07-05 14:40:04.5856|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAllNotesWithLabels", controller = "Note"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllNotesWithLabels() on controller Fundoo.Controllers.NoteController (Fundoo).
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.NoteController (Fundoo)
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:04.5856|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo) - Validation state: Valid
+2024-07-05 14:40:04.5856|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.6397ms.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-07-05 14:40:04.5856|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ModelLayer.ResponseML'.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:04.5856|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:04.5856|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo) in 1.2621ms
+2024-07-05 14:40:04.5856|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.NoteController.GetAllNotesWithLabels (Fundoo)'
+2024-07-05 14:40:04.5856|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFO" completed keep alive response.
+2024-07-05 14:40:04.5856|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/api/note/get-all-notes-with-labels - - - 200 - application/json;+charset=utf-8 2.0802ms
+2024-07-05 14:40:11.6060|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFO" received FIN.
+2024-07-05 14:40:11.6060|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-07-05 14:40:11.6060|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFO" disconnecting.
+2024-07-05 14:40:11.6060|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFO" stopped.
+2024-07-05 14:40:24.9929|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFP" accepted.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFP" started.
+2024-07-05 14:40:24.9954|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/api/label/getall - -
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/label/getall'
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.LabelController.GetAllLabels (Fundoo)' with route pattern 'api/label/getall' is valid for the request path '/api/label/getall'
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.LabelController.GetAllLabels (Fundoo)'
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-07-05 14:40:24.9954|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.LabelController.GetAllLabels (Fundoo)'
+2024-07-05 14:40:24.9954|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAllLabels", controller = "Label"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllLabels() on controller Fundoo.Controllers.LabelController (Fundoo).
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.LabelController (Fundoo)
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.LabelController (Fundoo)
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:24.9954|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.LabelController.GetAllLabels (Fundoo) - Validation state: Valid
+2024-07-05 14:40:24.9954|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Label>()'
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Label>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Label.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Label.LabelName (string) Required, 1] }
+        SELECT l.Id, l.LabelName
+        FROM Labels AS l), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Label>, 
+    RepositoryLayer.Context.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)'
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [l].[Id], [l].[LabelName]
+FROM [Labels] AS [l]
+2024-07-05 14:40:24.9954|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [l].[Id], [l].[LabelName]
+FROM [Labels] AS [l]
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:24.9954|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Fundoo.Controllers.LabelController.GetAllLabels (Fundoo), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5.7353ms.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-07-05 14:40:24.9954|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ModelLayer.ResponseML'.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:24.9954|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:24.9954|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.LabelController.GetAllLabels (Fundoo) in 7.2779ms
+2024-07-05 14:40:24.9954|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.LabelController.GetAllLabels (Fundoo)'
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFP" completed keep alive response.
+2024-07-05 14:40:24.9954|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.
+2024-07-05 14:40:24.9954|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/api/label/getall - - - 200 - application/json;+charset=utf-8 9.0988ms
+2024-07-05 14:40:31.6220|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFP" received FIN.
+2024-07-05 14:40:31.6220|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFP" disconnecting.
+2024-07-05 14:40:31.6220|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFP" stopped.
+2024-07-05 14:40:31.6220|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFQ" accepted.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFQ" started.
+2024-07-05 14:40:34.6421|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/api/label/getall - -
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/label/getall'
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.LabelController.GetAllLabels (Fundoo)' with route pattern 'api/label/getall' is valid for the request path '/api/label/getall'
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.LabelController.GetAllLabels (Fundoo)'
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-07-05 14:40:34.6421|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.LabelController.GetAllLabels (Fundoo)'
+2024-07-05 14:40:34.6421|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAllLabels", controller = "Label"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllLabels() on controller Fundoo.Controllers.LabelController (Fundoo).
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.LabelController (Fundoo)
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.LabelController (Fundoo)
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:34.6421|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.LabelController.GetAllLabels (Fundoo) - Validation state: Valid
+2024-07-05 14:40:34.6421|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [l].[Id], [l].[LabelName]
+FROM [Labels] AS [l]
+2024-07-05 14:40:34.6421|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [l].[Id], [l].[LabelName]
+FROM [Labels] AS [l]
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Label' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:34.6421|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Fundoo.Controllers.LabelController.GetAllLabels (Fundoo), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.4118ms.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-07-05 14:40:34.6421|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ModelLayer.ResponseML'.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:34.6421|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:34.6421|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.LabelController.GetAllLabels (Fundoo) in 3.1082ms
+2024-07-05 14:40:34.6421|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.LabelController.GetAllLabels (Fundoo)'
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFQ" completed keep alive response.
+2024-07-05 14:40:34.6421|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.
+2024-07-05 14:40:34.6421|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/api/label/getall - - - 200 - application/json;+charset=utf-8 4.2421ms
+2024-07-05 14:40:41.6269|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFQ" received FIN.
+2024-07-05 14:40:41.6269|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFQ" disconnecting.
+2024-07-05 14:40:41.6269|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-07-05 14:40:41.6354|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFQ" stopped.
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFR" accepted.
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFR" started.
+2024-07-05 14:40:47.3600|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/api/user/get-user-by-Id/5 - -
+2024-07-05 14:40:47.3600|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/user/get-user-by-Id/5'
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.UserController.GetUserById (Fundoo)' with route pattern 'api/user/get-user-by-Id/{id}' is valid for the request path '/api/user/get-user-by-Id/5'
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.UserController.GetUserById (Fundoo)'
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-07-05 14:40:47.3600|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-07-05 14:40:47.3600|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.UserController.GetUserById (Fundoo)'
+2024-07-05 14:40:47.3600|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserById(Int32) on controller Fundoo.Controllers.UserController (Fundoo).
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.UserController (Fundoo)
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.UserController (Fundoo)
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-07-05 14:40:47.3600|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:47.3600|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:47.3600|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:47.3600|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:47.3600|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.UserController.GetUserById (Fundoo) - Validation state: Valid
+2024-07-05 14:40:47.3600|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.UserController.GetUserById (Fundoo) with arguments (5)
+2024-07-05 14:40:47.3600|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<UserEntity>()
+    .FirstOrDefault(u => u.Id == __id_0)'
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<UserEntity>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: UserEntity.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: UserEntity.Email (string) Required, 1], [Property: UserEntity.Name (string) Required, 2], [Property: UserEntity.Password (string) Required, 3], [Property: UserEntity.PhoneNumber (long) Required, 4] }
+        SELECT TOP(1) u.Id, u.Email, u.Name, u.Password, u.PhoneNumber
+        FROM Users AS u
+        WHERE u.Id == @__id_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, UserEntity>, 
+    RepositoryLayer.Context.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:47.3600|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[PhoneNumber]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-07-05 14:40:47.3737|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[PhoneNumber]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-07-05 14:40:47.3737|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'UserEntity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:47.3737|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-07-05 14:40:47.3737|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:47.3737|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:47.3737|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Fundoo.Controllers.UserController.GetUserById (Fundoo), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 19.1642ms.
+2024-07-05 14:40:47.3737|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:47.3737|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:47.3737|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:47.3737|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:47.3737|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:47.3737|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:47.3737|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:47.3737|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-07-05 14:40:47.3737|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2024-07-05 14:40:47.3737|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-07-05 14:40:47.3737|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2024-07-05 14:40:47.3737|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-07-05 14:40:47.3737|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ModelLayer.ResponseML'.
+2024-07-05 14:40:47.3869|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:47.3869|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:47.3869|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:47.3869|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.UserController.GetUserById (Fundoo) in 23.8335ms
+2024-07-05 14:40:47.3869|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.UserController.GetUserById (Fundoo)'
+2024-07-05 14:40:47.3869|INFO|Microsoft.AspNetCore.Session.DistributedSession|Session started; Key:362d22ac-d45a-8e39-f8f8-151571a9fc79, Id:12cbcb93-5c76-7933-71ca-3a7dd8b8264e
+2024-07-05 14:40:47.3869|DEBUG|Microsoft.AspNetCore.Session.DistributedSession|Session stored; Key:362d22ac-d45a-8e39-f8f8-151571a9fc79, Id:12cbcb93-5c76-7933-71ca-3a7dd8b8264e, Count:2
+2024-07-05 14:40:47.3869|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFR" completed keep alive response.
+2024-07-05 14:40:47.3869|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.
+2024-07-05 14:40:47.3869|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/api/user/get-user-by-Id/5 - - - 200 - application/json;+charset=utf-8 33.5189ms
+2024-07-05 14:40:51.6511|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFR" received FIN.
+2024-07-05 14:40:51.6511|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFR" disconnecting.
+2024-07-05 14:40:51.6511|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFR" stopped.
+2024-07-05 14:40:51.6511|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN4SQ2SH6HFR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFS" accepted.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFS" started.
+2024-07-05 14:40:53.8867|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/api/user/get-user-by-Id/9 - -
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/user/get-user-by-Id/9'
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.UserController.GetUserById (Fundoo)' with route pattern 'api/user/get-user-by-Id/{id}' is valid for the request path '/api/user/get-user-by-Id/9'
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.UserController.GetUserById (Fundoo)'
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing unprotect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-07-05 14:40:53.8867|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.UserController.GetUserById (Fundoo)'
+2024-07-05 14:40:53.8867|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserById(Int32) on controller Fundoo.Controllers.UserController (Fundoo).
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.UserController (Fundoo)
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.UserController (Fundoo)
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:53.8867|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.UserController.GetUserById (Fundoo) - Validation state: Valid
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.UserController.GetUserById (Fundoo) with arguments (9)
+2024-07-05 14:40:53.8867|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[PhoneNumber]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-07-05 14:40:53.8867|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[PhoneNumber]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'UserEntity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Session.DistributedSession|Session loaded; Key:362d22ac-d45a-8e39-f8f8-151571a9fc79, Id:12cbcb93-5c76-7933-71ca-3a7dd8b8264e, Count:2
+2024-07-05 14:40:53.8867|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Fundoo.Controllers.UserController.GetUserById (Fundoo), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.0428ms.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-07-05 14:40:53.8867|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ModelLayer.ResponseML'.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:53.8867|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:53.8867|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.UserController.GetUserById (Fundoo) in 4.1461ms
+2024-07-05 14:40:53.8867|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.UserController.GetUserById (Fundoo)'
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Session.DistributedSession|Session stored; Key:362d22ac-d45a-8e39-f8f8-151571a9fc79, Id:12cbcb93-5c76-7933-71ca-3a7dd8b8264e, Count:2
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFS" completed keep alive response.
+2024-07-05 14:40:53.8867|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.
+2024-07-05 14:40:53.8867|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/api/user/get-user-by-Id/9 - - - 200 - application/json;+charset=utf-8 12.1330ms
+2024-07-05 14:40:58.4861|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5264/api/user/get-user-by-Id/29 - -
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/user/get-user-by-Id/29'
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Fundoo.Controllers.UserController.GetUserById (Fundoo)' with route pattern 'api/user/get-user-by-Id/{id}' is valid for the request path '/api/user/get-user-by-Id/29'
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Fundoo.Controllers.UserController.GetUserById (Fundoo)'
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing unprotect operation to key {9cd553ec-17ce-4bcd-aa9d-a1f405ca802b} with purposes ('C:\Users\kirti\Vikrant\CDAC\FUNDOO\Fundoo\', 'SessionMiddleware').
+2024-07-05 14:40:58.4861|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Fundoo.Controllers.UserController.GetUserById (Fundoo)'
+2024-07-05 14:40:58.4861|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserById(Int32) on controller Fundoo.Controllers.UserController (Fundoo).
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Fundoo.Controllers.UserController (Fundoo)
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Fundoo.Controllers.UserController (Fundoo)
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:58.4861|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.UserController.GetUserById (Fundoo) - Validation state: Valid
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Fundoo.Controllers.UserController.GetUserById (Fundoo) with arguments (29)
+2024-07-05 14:40:58.4861|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[PhoneNumber]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-07-05 14:40:58.4861|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[PhoneNumber]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Fundoo' on server '(localdb)\MSSQLLocalDB'.
+2024-07-05 14:40:58.4861|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Fundoo.Controllers.UserController.GetUserById (Fundoo), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.6489ms.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-07-05 14:40:58.4861|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'ModelLayer.ResponseML'.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:58.4861|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-07-05 14:40:58.4861|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Fundoo.Controllers.UserController.GetUserById (Fundoo) in 4.2605ms
+2024-07-05 14:40:58.4861|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Fundoo.Controllers.UserController.GetUserById (Fundoo)'
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN4SQ2SH6HFS" completed keep alive response.
+2024-07-05 14:40:58.4861|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.
+2024-07-05 14:40:58.4861|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5264/api/user/get-user-by-Id/29 - - - 404 - application/json;+charset=utf-8 6.3235ms

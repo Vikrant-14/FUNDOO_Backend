@@ -145,12 +145,15 @@ try
     builder.Services.AddSingleton(producerConfig);
     builder.Services.AddScoped<KafkaTopicCreator>();
 
-  
-
     //Build
     var app = builder.Build();
 
-   
+    // Create Kafka Topic
+    using (var scope = app.Services.CreateScope())
+    {
+        var topicCreator = scope.ServiceProvider.GetRequiredService<KafkaTopicCreator>();
+        await topicCreator.CreateTopicAsync();
+    }
 
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
@@ -174,13 +177,6 @@ try
     app.UseSession();
 
     app.MapControllers();
-
-    // Create Kafka Topic
-    using (var scope = app.Services.CreateScope())
-    {
-        var topicCreator = scope.ServiceProvider.GetRequiredService<KafkaTopicCreator>();
-        await topicCreator.CreateTopicAsync();
-    }
 
     app.Run();
 }
