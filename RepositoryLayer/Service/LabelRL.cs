@@ -1,8 +1,11 @@
-﻿using ModelLayer;
+﻿using Confluent.Kafka;
+using Microsoft.Extensions.Configuration;
+using ModelLayer;
 using RepositoryLayer.Context;
 using RepositoryLayer.CustomExecption;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
+using RepositoryLayer.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +17,13 @@ namespace RepositoryLayer.Service
     public class LabelRL : ILabelRL
     {
         private readonly ApplicationDbContext _context;
-
-        public LabelRL(ApplicationDbContext context)
+        private readonly ProducerConfig _prodConfig;
+        private readonly IConfiguration _configuration;
+        public LabelRL(ApplicationDbContext context, ProducerConfig prodConfig, IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;
+            _prodConfig = prodConfig;
         }
 
         public Label CreateLabel(LabelML model)
@@ -46,6 +52,8 @@ namespace RepositoryLayer.Service
 
             _context.Labels.Update(label);
             _context.SaveChanges();
+
+            _ = KafkaProducerService.produceMessage(label, _configuration, _prodConfig);
 
             return label;
         }

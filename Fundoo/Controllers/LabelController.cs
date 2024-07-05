@@ -16,16 +16,12 @@ namespace Fundoo.Controllers
         private readonly ILabelBL labelBL;
         private readonly ResponseML responseML;
         private readonly ILogger<LabelController> _logger;
-        private readonly ProducerConfig _prodConfig;
-        private readonly IConfiguration _configuration;
 
-        public LabelController(ILabelBL labelBL, ILogger<LabelController> logger, ProducerConfig prodConfig, IConfiguration configuration)
+        public LabelController(ILabelBL labelBL, ILogger<LabelController> logger)
         {
             this.labelBL = labelBL; 
             responseML = new ResponseML();
             _logger = logger;
-            _prodConfig = prodConfig;
-            _configuration = configuration;
         }
 
         [HttpPost("create-label")]
@@ -35,19 +31,6 @@ namespace Fundoo.Controllers
             try
             {
                 var result = labelBL.CreateLabel(model); // Ensure labelBL is properly defined
-
-                string serializedData = JsonConvert.SerializeObject(model);
-                var topic = _configuration.GetValue<string>("TopicConfiguration:TopicName");
-
-                using (var producer = new ProducerBuilder<Null, string>(_prodConfig).Build())
-                {
-                    await producer.ProduceAsync(topic, new Message<Null, string>
-                    {
-                        Value = serializedData
-                    });
-
-                    producer.Flush(TimeSpan.FromSeconds(10));
-                }
 
                 responseML.Success = true;
                 responseML.Message = "Label added successfully";
@@ -71,33 +54,7 @@ namespace Fundoo.Controllers
             try
             {
                 var result = labelBL.UpdateLabel(id, model);
-
-                int partition1 = 0;
-                int partition2 = 1;
-
-                string serializedData = JsonConvert.SerializeObject(result);
-                var topic = _configuration.GetValue<string>("TopicConfiguration:TopicName");
-
-                using ( var producer = new ProducerBuilder<int,string>(_prodConfig).Build() ) 
-                {
-                    if( result.Id % 2 == 0 )
-                    {
-                        await producer.ProduceAsync(new TopicPartition(topic,new Partition(partition1)), new Message<int, string>
-                        {
-                            Key = partition1,
-                            Value = serializedData
-                        });
-                    }
-                    else
-                    {
-                        await producer.ProduceAsync(new TopicPartition(topic, new Partition(partition2)), new Message<int, string>
-                        {
-                            Key = partition2,
-                            Value = serializedData
-                        });
-                    }
-                }
-
+                 
                 responseML.Success = true;
                 responseML.Message = "Label updated successfully";
                 responseML.Data = result;

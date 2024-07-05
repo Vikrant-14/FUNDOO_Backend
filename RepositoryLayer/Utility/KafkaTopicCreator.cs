@@ -43,10 +43,12 @@ public class KafkaTopicCreator
             {
                 if (e.Results[0].Error.Code != ErrorCode.TopicAlreadyExists)
                 {
+                    await Console.Out.WriteLineAsync($"An error occurred creating topic {topicConfig.TopicName}: {e.Results[0].Error.Reason}");
                     _logger.LogError($"An error occurred creating topic {topicConfig.TopicName}: {e.Results[0].Error.Reason}");
                 }
                 else
                 {
+                    await Console.Out.WriteLineAsync($"Topic {topicConfig.TopicName} already exists.");
                     _logger.LogInformation($"Topic {topicConfig.TopicName} already exists.");
                 }
             }
