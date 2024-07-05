@@ -78,19 +78,21 @@ namespace Fundoo.Controllers
                 string serializedData = JsonConvert.SerializeObject(result);
                 var topic = _configuration.GetValue<string>("TopicConfiguration:TopicName");
 
-                using ( var producer = new ProducerBuilder<Null,string>(_prodConfig).Build() ) 
+                using ( var producer = new ProducerBuilder<int,string>(_prodConfig).Build() ) 
                 {
                     if( result.Id % 2 == 0 )
                     {
-                        await producer.ProduceAsync(new TopicPartition(topic, partition1), new Message<Null, string>
+                        await producer.ProduceAsync(new TopicPartition(topic,new Partition(partition1)), new Message<int, string>
                         {
+                            Key = partition1,
                             Value = serializedData
                         });
                     }
                     else
                     {
-                        await producer.ProduceAsync(new TopicPartition(topic, partition2), new Message<Null, string>
+                        await producer.ProduceAsync(new TopicPartition(topic, new Partition(partition2)), new Message<int, string>
                         {
+                            Key = partition2,
                             Value = serializedData
                         });
                     }

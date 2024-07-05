@@ -38,7 +38,8 @@ public class KafkaConsumerService
             })
             .Build();
 
-        consumer.Subscribe(_topic);
+        var partition = new TopicPartition(_topic, new Partition(1));
+        consumer.Assign(partition);
 
         try
         {
@@ -67,7 +68,7 @@ class Program
 
         var cancellationTokenSource = new CancellationTokenSource();
 
-        var consumer1 = new KafkaConsumerService(bootstrapServers, groupId, topic, 5);
+        var consumer1 = new KafkaConsumerService(bootstrapServers, groupId, topic, 2);
         var consumer2 = new KafkaConsumerService(bootstrapServers, groupId, topic, 9);
 
         var consumerTask1 = consumer1.StartConsumingAsync(cancellationTokenSource.Token);
@@ -87,39 +88,3 @@ class Program
         }
     }
 }
-
-
-
-//using Confluent.Kafka;
-//using System;
-
-//var conf = new ConsumerConfig
-//{
-//    GroupId = "my-consumer-group",
-//    BootstrapServers = "localhost:9092",
-//    AutoOffsetReset = AutoOffsetReset.Earliest
-//};
-
-//using (var consumer = new ConsumerBuilder<Ignore, string>(conf).Build())
-//{
-//    consumer.Subscribe("KafkaTopic1");
-
-//    CancellationTokenSource cts = new CancellationTokenSource();
-//    Console.CancelKeyPress += (_, e) => {
-//        e.Cancel = true; // prevent the process from terminating.
-//        cts.Cancel();
-//    };
-
-//    try
-//    {
-//        while (true)
-//        {
-//            var cr = consumer.Consume(cts.Token);
-//            Console.WriteLine($"Consumed message '{cr.Value}' at: '{cr.TopicPartitionOffset}'.");
-//        }
-//    }
-//    catch (OperationCanceledException)
-//    {
-//        consumer.Close();
-//    }
-//}

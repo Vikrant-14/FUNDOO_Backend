@@ -38,7 +38,8 @@ public class KafkaConsumerService
             })
             .Build();
 
-        consumer.Subscribe(_topic);
+        var partition = new TopicPartition(_topic, new Partition(0));
+        consumer.Assign(partition);
 
         try
         {
@@ -67,7 +68,7 @@ class Program
 
         var cancellationTokenSource = new CancellationTokenSource();
 
-        var consumer1 = new KafkaConsumerService(bootstrapServers, groupId, topic, 5);
+        var consumer1 = new KafkaConsumerService(bootstrapServers, groupId, topic, 2);
         var consumer2 = new KafkaConsumerService(bootstrapServers, groupId, topic, 9);
 
         var consumerTask1 = consumer1.StartConsumingAsync(cancellationTokenSource.Token);
