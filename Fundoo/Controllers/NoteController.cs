@@ -26,6 +26,7 @@ namespace Fundoo.Controllers
         }
 
         [HttpPost("createnote")]
+        [Authorize(Roles ="Admin")]
         public IActionResult CreateNote([FromBody] NoteML noteML)
         {
             try

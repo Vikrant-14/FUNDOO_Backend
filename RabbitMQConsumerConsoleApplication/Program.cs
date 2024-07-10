@@ -24,8 +24,8 @@ var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();
 
 //declare the queue after mentioning name and a few property related to that
-channel.QueueDeclare("NoteQueue", exclusive: false);
-
+channel.QueueDeclare("USERQueue", exclusive: false);
+Console.WriteLine("Queue created");
 //Set Event object which listen message from channel which is sent by producer
 var consumer  = new EventingBasicConsumer(channel);
 consumer.Received += (model, eventArgs) =>
@@ -38,5 +38,5 @@ consumer.Received += (model, eventArgs) =>
     EmailSender.SendEmail(new EmailML { To = result.To, Body = result.Body, Subject = result.Subject });
 };
 //read message 
-channel.BasicConsume(queue: "NoteQueue", autoAck: true ,consumer: consumer);
+channel.BasicConsume(queue: "USERQueue", autoAck: true ,consumer: consumer);
 Console.ReadLine();

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using ModelLayer;
@@ -17,6 +18,7 @@ using System.Threading.Tasks;
 
 namespace RepositoryLayer.Service
 {
+    [Authorize]
     public class NoteRL : INoteRL
     {
         private readonly ApplicationDbContext _context;
@@ -134,6 +136,7 @@ namespace RepositoryLayer.Service
             }
         }
 
+        [Authorize("Admin")]
         public IList<NoteWithLabelDTO> GetNotes()
         {
             var cachedNotes = RedisCacheHelper.GetFromCache<List<NoteWithLabelDTO>>(cacheKey, _cache);

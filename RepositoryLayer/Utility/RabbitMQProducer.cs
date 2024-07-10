@@ -27,7 +27,7 @@ namespace RepositoryLayer.Utility
             using var channel = connection.CreateModel();
 
             //declare the queue after mentioning name and a few property related to that
-            channel.QueueDeclare("NoteQueue", exclusive: false);
+            channel.QueueDeclare("USERQueue", exclusive: false);
 
             //Serialize the message
             var json = JsonConvert.SerializeObject(new EmailML
@@ -39,7 +39,7 @@ namespace RepositoryLayer.Utility
             var body = Encoding.UTF8.GetBytes(json);
 
             //put the data on to the note queue
-            channel.BasicPublish(exchange:"",routingKey: "NoteQueue", body:body);
+            channel.BasicPublish(exchange:"",routingKey: "USERQueue", body:body);
         }
     }
 }

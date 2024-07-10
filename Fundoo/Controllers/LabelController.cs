@@ -66,6 +66,8 @@ namespace Fundoo.Controllers
                 responseML.Success = false;
                 responseML.Message = ex.Message;
 
+                _logger.LogError(ex.Message);
+                
                 return StatusCode(404, responseML);
             }
         }
@@ -87,6 +89,8 @@ namespace Fundoo.Controllers
             {
                 responseML.Success = false;
                 responseML.Message = ex.Message;
+
+                _logger.LogError(ex.Message);
 
                 return StatusCode(404, responseML);
             }

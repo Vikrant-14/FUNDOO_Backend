@@ -86,7 +86,7 @@ namespace Fundoo.Controllers
                     responseML.Message = "User Registered Successfully";
                     responseML.Data = result;
 
-                    _rabbitMQ.SendMessage(responseML.Message, result.Email, "register successful");
+                    _rabbitMQ.SendMessage($"{model.Name} Registered Successfully", result.Email, "register successful");
                 }
 
 
@@ -101,7 +101,7 @@ namespace Fundoo.Controllers
             {
                 responseML.Success = false;
                 responseML.Message = ex.Message;
-
+                                                                                                                                                                                                                                                                                                                     
                 return StatusCode(400, responseML);
             }
 
